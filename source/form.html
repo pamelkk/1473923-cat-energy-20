@@ -20,7 +20,127 @@
         </ul>
       </nav>
     </header>
-    <main class="page-main"></main>
+    <main class="page-main">
+      <section class="page-main__selection selection">
+        <h1 class="selection__title">Подбор программы</h1>
+        <p class="selection__hint">
+          Заполните анкету, и мы подберем программу питания для вашего кота
+        </p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="fieldset-name">
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Барсик"
+              required
+            />
+            <label for="name">Имя:</label>
+            <input
+              id="weight"
+              type="text"
+              name="weight"
+              placeholder="7"
+              required
+            />
+            <label for="weight">Вес (кг):</label>
+            <input id="age" type="text" name="age" placeholder="7" />
+            <label for="age">Возраст (лет):</label>
+          </fieldset>
+          <fieldset class="fieldset-choose-program program">
+            <ul class="program__list">
+              <li class="program__item">
+                <input
+                  type="radio"
+                  value="slim"
+                  name="slim-program"
+                  id="slim-program"
+                  checked
+                />
+                <label for="slim-program">Похудение</label>
+              </li>
+              <li class="program__item">
+                <input
+                  type="radio"
+                  value="gain"
+                  name="gain-program"
+                  id="gain-program"
+                />
+                <label for="gain-program">Набор массы</label>
+              </li>
+              <li class="program__item">
+                <input
+                  type="radio"
+                  value="dont-know"
+                  name="dont-know"
+                  id="dont-know"
+                />
+                <label for="dont-know">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="fieldset-contacts">
+            <legend>Контактные данные (владельца кота)</legend>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="kuklachev@gmail.com"
+              required
+            />
+            <label for="email">E-mail:</label>
+            <input
+              type="tel"
+              id="tel"
+              name="tel"
+              placeholder="8(960)900-60-90"
+              required
+            />
+            <label for="tel">Телефон:</label>
+          </fieldset>
+          <fieldset class="fieldset-comments">
+            <textarea name="comments" id="comments" rows="5">
+            Расскажите обо всех повадках кота
+          </textarea
+            >
+          </fieldset>
+          <fieldset class="fieldset-additional">
+            <ul class="additional__list">
+              <li class="additional__item">
+                <input
+                  type="checkbox"
+                  name="sweetener"
+                  id="sweetener"
+                  checked
+                />
+                <label for="sweetener">Сахарозаменитель</label>
+              </li>
+              <li class="additional__item">
+                <input type="checkbox" name="water" id="water" />
+                <label for="water">Питьевая вода</label>
+              </li>
+              <li class="additional__item">
+                <input type="checkbox" name="milk" id="milk" />
+                <label for="milk">Молоко</label>
+              </li>
+              <li class="additional__item">
+                <input type="checkbox" name="vitamins" id="vitamins" />
+                <label for="vitamins">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+        <small>* - Обязательные поля</small>
+      </section>
+      <section class="map">
+        <h4 class="visually-hidden">Как до нас добраться</h4>
+        <p class="map-text">
+          <span>Пришлашаем к сотрудничеству дилеров!</span>ул.Большая
+          Конюшенная, д.19/8 Санкт-Петербург
+        </p>
+        <img src="" width="" height="" alt="" />
+      </section>
+    </main>
     <footer class="page-footer">
       <div class="footer-logo"></div>
       <div class="page-footer__social social">
