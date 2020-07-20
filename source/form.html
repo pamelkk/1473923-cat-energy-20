@@ -26,8 +26,10 @@
         <p class="selection__hint">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
+
         <form action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="fieldset-name">
+            <legend class="visually-hidden">Данные о вашем питомце</legend>
             <input
               id="name"
               type="text"
@@ -38,13 +40,13 @@
             <label for="name">Имя:</label>
             <input
               id="weight"
-              type="text"
+              type="number"
               name="weight"
               placeholder="7"
               required
             />
             <label for="weight">Вес (кг):</label>
-            <input id="age" type="text" name="age" placeholder="7" />
+            <input id="age" type="number" name="age" placeholder="7" />
             <label for="age">Возраст (лет):</label>
           </fieldset>
           <fieldset class="fieldset-choose-program program">
@@ -53,7 +55,7 @@
                 <input
                   type="radio"
                   value="slim"
-                  name="slim-program"
+                  name="program"
                   id="slim-program"
                   checked
                 />
@@ -63,7 +65,7 @@
                 <input
                   type="radio"
                   value="gain"
-                  name="gain-program"
+                  name="program"
                   id="gain-program"
                 />
                 <label for="gain-program">Набор массы</label>
@@ -72,7 +74,7 @@
                 <input
                   type="radio"
                   value="dont-know"
-                  name="dont-know"
+                  name="program"
                   id="dont-know"
                 />
                 <label for="dont-know">Не знаю (нужен ваш совет)</label>
@@ -99,32 +101,29 @@
             <label for="tel">Телефон:</label>
           </fieldset>
           <fieldset class="fieldset-comments">
-            <textarea name="comments" id="comments" rows="5">
+            <legend>Комментарий</legend>
+            <textarea name="comments" id="comments" rows="7">
             Расскажите обо всех повадках кота
           </textarea
             >
           </fieldset>
           <fieldset class="fieldset-additional">
+            <legend>Дополнительно</legend>
             <ul class="additional__list">
               <li class="additional__item">
-                <input
-                  type="checkbox"
-                  name="sweetener"
-                  id="sweetener"
-                  checked
-                />
+                <input type="checkbox" name="add-good" id="sweetener" checked />
                 <label for="sweetener">Сахарозаменитель</label>
               </li>
               <li class="additional__item">
-                <input type="checkbox" name="water" id="water" />
+                <input type="checkbox" name="add-good" id="water" />
                 <label for="water">Питьевая вода</label>
               </li>
               <li class="additional__item">
-                <input type="checkbox" name="milk" id="milk" />
+                <input type="checkbox" name="add-good" id="milk" />
                 <label for="milk">Молоко</label>
               </li>
               <li class="additional__item">
-                <input type="checkbox" name="vitamins" id="vitamins" />
+                <input type="checkbox" name="add-good" id="vitamins" />
                 <label for="vitamins">Витамины</label>
               </li>
             </ul>
@@ -133,11 +132,11 @@
         <small>* - Обязательные поля</small>
       </section>
       <section class="map">
-        <h4 class="visually-hidden">Как до нас добраться</h4>
-        <p class="map-text">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <address class="map-text">
           <span>Пришлашаем к сотрудничеству дилеров!</span>ул.Большая
           Конюшенная, д.19/8 Санкт-Петербург
-        </p>
+        </address>
         <img src="" width="" height="" alt="" />
       </section>
     </main>
