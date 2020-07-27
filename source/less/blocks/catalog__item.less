@@ -1,13 +1,14 @@
 // Начните писать стили здесь
 .page-main__catalog {
-  font-family: @font-face;
-  color: #111111;
+  font-family: "Oswald", sans-serif;
+  color: @light-black;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "FontNormal";
+  font-family: "Oswald", sans-serif;
   src: url("../../fonts/oswaldregular.woff");
+  src: url("../../fonts/oswaldregular.woff2");
 }
 
 .open-all__text {
@@ -19,7 +20,7 @@
 .open-all__description {
   font-size: 12px;
   line-height: 16px;
-  color: #444444;
+  color: @grey;
   font-family: "Arial", sans-serif;
 }
 
@@ -29,6 +30,6 @@
   line-height: 0px;
   text-align: center;
   text-transform: uppercase;
-  color: #444444;
-  background-color: #f2f2f2;
+  color: @grey;
+  background-color: @light-grey;
 }
