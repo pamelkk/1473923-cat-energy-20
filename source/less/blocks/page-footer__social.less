@@ -1,0 +1,49 @@
+// Начните писать стили здесь
+.page-main__header {
+  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background-size: 320px 305px;
+  background-repeat: no-repeat;
+  font-family: @font-face;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.social__list {
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.social__list::after,
+.social__list::before {
+  content: "";
+  width: 280px;
+  height: 1px;
+  color: #d9d9d9;
+  position: absolute;
+}
+
+.social__list::before {
+  top: 20px;
+  left: 0;
+}
+
+.social__list::after {
+  bottom: 21px;
+  left: 0;
+}
+
+.social__link--vkontakte svg {
+  width: 23px;
+  height: 16px;
+}
+
+.social__link--instagram svg {
+  width: 16px;
+  height: 16px;
+}
+
+.social__link--facebook svg {
+  width: 22px;
+  height: 22px;
+}

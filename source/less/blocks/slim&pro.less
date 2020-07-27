@@ -1,0 +1,43 @@
+// Начните писать стили здесь
+.slim,
+.pro {
+  font-family: @font-face;
+  color: #000000;
+  background-color: #f2f2f2;
+  position: relative;
+  font-weight: normal;
+}
+
+.slim p::after,
+.pro p::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 1px;
+  color: #d9d9d9;
+  bottom: 23px;
+  left: 0;
+}
+
+.slim h3,
+.pro h3 {
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.slim p,
+.pro p {
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  font-family: "Arial", sans-serif;
+}
+
+.slim a,
+.pro a {
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
