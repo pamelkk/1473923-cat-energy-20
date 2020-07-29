@@ -1,41 +1,40 @@
-// Начните писать стили здесь
 .slim,
 .pro {
   font-family: "Oswald", sans-serif;
-  color: @black;
-  background-color: @light-grey;
+  color: @basic-black;
+  background-color: @features-sample-footer-catalogbutton;
   position: relative;
   font-weight: normal;
 }
 
-.slim p::after,
-.pro p::after {
+.slim-title::after,
+.pro-title::after {
   content: "";
   position: absolute;
   width: 240px;
   height: 1px;
-  color: @grey-d9;
+  color: @social-lines;
   bottom: 23px;
   left: 0;
 }
 
-.slim h3,
-.pro h3 {
+.slim-title,
+.pro-title {
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 }
 
-.slim p,
-.pro p {
+.slim-description,
+.pro-description {
   font-size: 14px;
   line-height: 18px;
-  color: @grey;
+  color: @basic-grey;
   font-family: "Arial", sans-serif;
 }
 
-.slim a,
-.pro a {
+.pro-link,
+.slim-link {
   font-size: 16px;
   line-height: 16px;
   text-align: center;
