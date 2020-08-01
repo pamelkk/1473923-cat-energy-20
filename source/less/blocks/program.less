@@ -1,14 +1,11 @@
-.slim,
-.pro {
-  font-family: "Oswald", sans-serif;
-  color: @basic-black;
-  background-color: @features-sample-footer-catalogbutton;
+.program {
+  color: @basic-text;
+  background-color: @features-footer;
   position: relative;
-  font-weight: normal;
+  font-weight: 400;
 }
 
-.slim__title::after,
-.pro__title::after {
+.program__title::after {
   content: "";
   position: absolute;
   width: 240px;
@@ -18,23 +15,20 @@
   left: 0;
 }
 
-.slim__title,
-.pro__title {
+.program__title {
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 }
 
-.slim__description,
-.pro__description {
+.program__description {
   font-size: 14px;
   line-height: 18px;
   color: @basic-grey;
-  font-family: "Arial", sans-serif;
+  font-family: @font-text;
 }
 
-.pro__link,
-.slim__link {
+.program__link {
   font-size: 16px;
   line-height: 16px;
   text-align: center;
