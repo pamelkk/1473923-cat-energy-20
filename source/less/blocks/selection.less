@@ -1,6 +1,7 @@
-.page-main__selection {
+.selection {
   color: @basic-text;
   font-weight: 400;
+  font-family: @font-header;
 }
 
 .selection__title {
@@ -22,33 +23,13 @@
   line-height: 18px;
   color: @basic-grey;
   text-transform: uppercase;
-}
 
-.selection__fs-choose-program {
-  list-style: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: @item-title;
-}
+  &--program {
+    list-style: none;
+    color: @item-title;
+  }
 
-.contacts__title {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 26px;
-  color: @basic-text;
-}
-
-.selection__fs-additional {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: @basic-text;
-}
-
-.additional__list,
-.program__list {
-  list-style: none;
+  &--additional {
+    color: @basic-text;
+  }
 }
