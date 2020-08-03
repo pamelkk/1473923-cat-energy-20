@@ -1,0 +1,45 @@
+.social {
+  font-family: @font-header;
+}
+
+.social__list {
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.social__list::after,
+.social__list::before {
+  content: "";
+  width: 280px;
+  height: 1px;
+  color: @social-lines;
+  position: absolute;
+}
+
+.social__list::before {
+  top: 20px;
+  left: 0;
+}
+
+.social__list::after {
+  bottom: 21px;
+  left: 0;
+}
+
+.social__img {
+  &--vk {
+    width: 23px;
+    height: 16px;
+  }
+
+  &--inst {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--fb {
+    width: 22px;
+    height: 22px;
+  }
+}

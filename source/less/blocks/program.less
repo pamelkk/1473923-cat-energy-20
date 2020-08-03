@@ -1,0 +1,37 @@
+.program {
+  color: @basic-text;
+  background-color: @features-footer;
+  position: relative;
+  font-weight: 400;
+  font-family: @font-header;
+}
+
+.program__title::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 1px;
+  color: @social-lines;
+  bottom: 23px;
+  left: 0;
+}
+
+.program__title {
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.program__description {
+  font-size: 14px;
+  line-height: 18px;
+  color: @basic-grey;
+  font-family: @font-text;
+}
+
+.program__link {
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
