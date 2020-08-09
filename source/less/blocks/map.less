@@ -2,12 +2,21 @@
   font-family: @font-text;
   color: @form-etc;
   font-weight: 400;
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: @features-footer;
 }
 
 .map__text {
   font-size: 14px;
   line-height: 20px;
-  color: @basic-grey;
+  color: @basic-dark-text;
+  min-height: 50px;
+  width: 140px;
+  font-style: normal;
+  font-family: @font-text;
 }
 
 .map__invite {
@@ -15,4 +24,51 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @form-etc;
+  width: 140px;
+}
+
+.map__address {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .map {
+    width: 768px;
+  }
+
+  .map__address {
+    width: 768px;
+    box-sizing: border-box;
+    padding-top: 65px;
+    padding-left: 71px;
+    padding-right: 72px;
+    padding-bottom: 58px;
+  }
+
+  .map__text {
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    width: 1440px;
+    position: relative;
+  }
+
+  .map__address {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    padding: 60px;
+    width: 570px;
+    background-color: @basic-bck;
+  }
+
+  .map__text {
+    text-align: left;
+  }
 }

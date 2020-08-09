@@ -1,0 +1,36 @@
+.footer {
+  width: 320px;
+  background-color: @features-footer;
+}
+
+.footer__logo {
+  font-family: @font-header;
+  padding-top: 39px;
+  padding-bottom: 32px;
+  padding-left: 96px;
+  padding-right: 96px;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    width: 708px;
+    padding-top: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    width: 1220px;
+    padding-top: 57px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
