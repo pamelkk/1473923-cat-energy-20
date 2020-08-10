@@ -8,19 +8,20 @@
   position: relative;
   box-sizing: border-box;
   width: 320px;
+
+  &::before {
+    content: "";
+    background-image: url("../../img/index-background-mobile@1x.jpg");
+    width: 320px;
+    height: 305px;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
 }
 
-.header::before {
-  content: "";
-  background-image: url("../../img/index-background-mobile@1x.jpg");
-  width: 320px;
-  height: 305px;
-  position: absolute;
-  background-repeat: no-repeat;
-  top: 0;
-  left: 0;
-  z-index: -2;
-}
 
 .header__product {
   margin-top: 29px;
@@ -78,10 +79,6 @@
     margin-top: 0;
   }
 
-  .header::before {
-    display: none;
-  }
-
   .header__title {
     text-align: left;
     color: @basic-text;
@@ -109,6 +106,10 @@
     background-image: none;
     min-height: 800px;
     width: 768px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .header__choose-program {
@@ -126,6 +127,15 @@
 @media (min-width: @desktop-width) {
   .header {
     top: 0;
+
+    &::before {
+      display: block;
+      width: 720px;
+      height: 696px;
+      position: absolute;
+      top: 0;
+      left: 720px;
+    }
   }
 
   .header__title {
@@ -147,14 +157,5 @@
     top: 143px;
     left: 558px;
     z-index: 1;
-  }
-
-  .header::before {
-    display: block;
-    width: 720px;
-    height: 696px;
-    position: absolute;
-    top: 0;
-    left: 720px;
   }
 }

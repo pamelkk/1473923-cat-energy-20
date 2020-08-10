@@ -2,19 +2,21 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="MobileOptimized" content="320" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__logo">
         <a class="page-header__link"
-          ><img class="page-header__img"
+          ><img
+            class="page-header__img"
             src="img/logo-mobile.svg"
             width="190"
             height="38"
             alt="Логотип нашей компании"
         /></a>
-        <button class="page-header__menu" title="Открыть меню"></button>
+        <button class="page-header__open-menu" title="Открыть меню"></button>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list">
@@ -38,127 +40,181 @@
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
 
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form
+          class="selection__form"
+          action="https://echo.htmlacademy.ru"
+          method="post"
+        >
           <fieldset class="selection__fs--name fs-name">
             <legend class="visually-hidden">Данные о вашем питомце</legend>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Барсик"
-              required
-            />
-            <label for="name">Имя:</label>
-            <input
-              id="weight"
-              type="number"
-              name="weight"
-              placeholder="7"
-              required
-            />
-            <label for="weight">Вес (кг):</label>
-            <input id="age" type="number" name="age" placeholder="7" />
-            <label for="age">Возраст (лет):</label>
+            <div class="fs-name__row">
+              <label class="fs-name__title" for="name">Имя:*</label>
+              <input
+                class="fs-name__field"
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Барсик"
+                required
+              />
+            </div>
+            <div class="fs-name__row">
+              <label class="fs-name__title" for="weight">Вес (кг):*</label>
+              <input
+                class="fs-name__field"
+                id="weight"
+                type="number"
+                name="weight"
+                placeholder="7"
+                required
+              />
+            </div>
+            <div class="fs-name__row">
+              <label class="fs-name__title" for="age">Возраст (лет):</label>
+              <input
+                class="fs-name__field"
+                id="age"
+                type="number"
+                name="age"
+                placeholder="7"
+              />
+            </div>
           </fieldset>
           <fieldset class="selection__fs--program fs-program">
             <ul class="fs-program__list">
               <li class="fs-program__item">
                 <input
+                  class="fs-program__field"
                   type="radio"
                   value="slim"
                   name="program"
                   id="slim-program"
                   checked
                 />
-                <label for="slim-program">Похудение</label>
+                <label class="fs-program__title" for="slim-program"
+                  >Похудение</label
+                >
               </li>
               <li class="fs-program__item">
                 <input
+                  class="fs-program__field"
                   type="radio"
                   value="gain"
                   name="program"
                   id="gain-program"
                 />
-                <label for="gain-program">Набор массы</label>
+                <label class="fs-program__title" for="gain-program"
+                  >Набор массы</label
+                >
               </li>
               <li class="fs-program__item">
                 <input
+                  class="fs-program__field"
                   type="radio"
                   value="dont-know"
                   name="program"
                   id="dont-know"
                 />
-                <label for="dont-know">Не знаю (нужен ваш совет)</label>
+                <label class="fs-program__title" for="dont-know"
+                  >Не знаю (нужен ваш совет)</label
+                >
               </li>
             </ul>
           </fieldset>
           <fieldset class="selection__fs--contacts fs-contacts">
-            <legend class="fs-contacts__title">
+            <legend class="fs-contacts__head">
               Контактные данные (владельца кота)
             </legend>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="kuklachev@gmail.com"
-              required
-            />
-            <label for="email">E-mail:</label>
-            <input
-              type="tel"
-              id="tel"
-              name="tel"
-              placeholder="8(960)900-60-90"
-              required
-            />
-            <label for="tel">Телефон:</label>
+            <div class="fs-contacts__row">
+              <label class="fs-contacts__title" for="email">E-mail:*</label>
+              <input
+                class="fs-contacts__field"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="kuklachev@gmail.com"
+                required
+              />
+            </div>
+            <div class="fs-contacts__row">
+              <label class="fs-contacts__title" for="tel">Телефон:*</label>
+              <input
+                class="fs-contacts__field"
+                type="tel"
+                id="tel"
+                name="tel"
+                placeholder="8(960)900-60-90"
+                required
+              />
+            </div>
           </fieldset>
           <fieldset class="selection__fs--comments fs-comments">
-            <legend class="fs-comments__title">Комментарий</legend>
-            <textarea name="fs-comments" id="comments" rows="7">
-            Расскажите обо всех повадках кота
+            <legend class="fs-comments__head">Комментарий</legend>
+            <textarea
+              class="fs-comments__field"
+              name="fs-comments"
+              id="comments"
+              rows="7"
+            >
+Расскажите обо всех повадках кота
           </textarea
             >
           </fieldset>
           <fieldset class="selection__fs--additional fs-additional">
-            <legend class="fs-additional__title">Дополнительно</legend>
+            <legend class="fs-additional__head">Дополнительно</legend>
             <ul class="fs-additional__list">
               <li class="fs-additional__item">
                 <input
+                  class="fs-additional__field"
                   type="checkbox"
                   name="add-good"
                   id="sweetener"
                   value="sweetener"
                   checked
                 />
-                <label for="sweetener">Сахарозаменитель</label>
+                <label class="fs-additional__title" for="sweetener"
+                  >Сахарозаменитель</label
+                >
               </li>
               <li class="fs-additional__item">
                 <input
+                  class="fs-additional__field"
                   type="checkbox"
                   name="add-good"
                   id="water"
                   value="water"
                 />
-                <label for="water">Питьевая вода</label>
-              </li>
-              <li class="fs-additional__item">
-                <input type="checkbox" name="add-good" id="milk" value="milk" />
-                <label for="milk">Молоко</label>
+                <label class="fs-additional__title" for="water"
+                  >Питьевая вода</label
+                >
               </li>
               <li class="fs-additional__item">
                 <input
+                  class="fs-additional__field"
+                  type="checkbox"
+                  name="add-good"
+                  id="milk"
+                  value="milk"
+                />
+                <label class="fs-additional__title" for="milk">Молоко</label>
+              </li>
+              <li class="fs-additional__item">
+                <input
+                  class="fs-additional__field"
                   type="checkbox"
                   name="add-good"
                   id="vitamins"
                   value="vitamins"
                 />
-                <label for="vitamins">Витамины</label>
+                <label class="fs-additional__title" for="vitamins"
+                  >Витамины</label
+                >
               </li>
             </ul>
+            <button class="selection__send">Отправить заявку</button>
           </fieldset>
         </form>
-        <small>* - Обязательные поля</small>
+        <small class="selection__required">* - Обязательные поля</small>
       </section>
       <section class="map">
         <h2 class="visually-hidden">Как до нас добраться</h2>

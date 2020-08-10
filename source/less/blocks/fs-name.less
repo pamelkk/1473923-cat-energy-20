@@ -1,3 +1,52 @@
 .fs-name {
   font-family: @font-header;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  flex-direction: column;
+  width: 280px;
+  border: none;
+  padding: 0;
+  padding-bottom: 27px;
+  border-bottom: 1px solid @social-lines;
+}
+
+.fs-name__field {
+  padding-top: 13px;
+  padding-bottom: 15px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  flex-grow: 0.5;
+  align-self: center;
+  min-width: 172px;
+  border: 1px solid @border-form;
+  color: @basic-dark-text;
+  font-family: @font-header;
+  box-sizing: border-box;
+}
+
+.fs-name__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  flex-grow: 2;
+  align-self: center;
+  min-width: 39px;
+}
+
+.fs-name__row {
+  height: 45px;
+  margin-bottom: 12px;
+  display: flex;
+  width: 281px;
+  box-sizing: border-box;
+}
+
+.fs-name__row:last-of-type {
+  margin-bottom: 0;
 }
