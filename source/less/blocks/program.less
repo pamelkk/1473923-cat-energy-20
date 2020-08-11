@@ -1,32 +1,46 @@
 .program {
   color: @basic-text;
   background-color: @features-footer;
-  position: relative;
   font-weight: 400;
   font-family: @font-header;
-}
-
-.program__title::after {
-  content: "";
-  position: absolute;
-  width: 240px;
-  height: 1px;
-  color: @social-lines;
-  bottom: 23px;
-  left: 0;
+  width: 280px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 266px;
+  box-sizing: border-box;
 }
 
 .program__title {
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  margin: 0;
+  align-self: center;
+  margin-top: 12px;
 }
 
 .program__description {
+  position: relative;
   font-size: 14px;
   line-height: 18px;
-  color: @basic-grey;
+  color: @basic-dark-text;
   font-family: @font-text;
+  margin: 0;
+  align-self: flex-start;
+  margin-top: 29px;
+  width: 227px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 1px;
+    color: @social-lines;
+    bottom: -23px;
+    left: 0;
+  }
 }
 
 .program__link {
@@ -34,4 +48,61 @@
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .program {
+    width: 708px;
+    margin-top: 0;
+    min-height: 372px;
+    padding: 57px;
+  }
+
+  .program__title {
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+
+  .program__description {
+    margin-top: 24px;
+    width: 377px;
+  }
+
+  .program:nth-of-type(n+2) {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program {
+    width: 570px;
+    margin: 0;
+    min-height: 374px;
+    padding: 55px;
+  }
+
+  .program__title {
+    margin-top: 22px;
+    align-self: center;
+  }
+
+  .program__description {
+    margin-top: 73px;
+    width: 467px;
+    align-self: center;
+  }
+
+  .program:nth-of-type(n+2) {
+    margin-top: 0;
+  }
+
+  .program:nth-of-type(n+3) {
+    margin-top: 30px;
+  }
+
+  .program:nth-of-type(2n) {
+    margin-left: 80px;
+  }
 }

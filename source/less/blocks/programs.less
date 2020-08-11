@@ -1,0 +1,23 @@
+.programs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .programs {
+    width: 768px;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    width: 1440px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    margin-left: 102px;
+    margin-right: 102px;
+  }
+}

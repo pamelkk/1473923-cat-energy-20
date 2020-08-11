@@ -1,7 +1,61 @@
 .fs-program {
   font-family: @font-header;
+  width: 280px;
+  list-style: none;
+  color: @item-title;
+  border: none;
+  padding: 0;
+  margin-top: 20px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid @social-lines;
 }
 
 .fs-program__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fs-program__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.fs-program__item {
+  margin-bottom: 15px;
+}
+
+.fs-program__item:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .fs-program {
+    border: 1px solid @border-form;
+    width: 630px;
+    margin-top: 72px;
+    padding-bottom: 0;
+  }
+
+  .fs-program__list {
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 25px;
+    padding-bottom: 29px;
+  }
+
+  .fs-program__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fs-program {
+    width: 568px;
+    margin-left: 80px;
+    margin-top: 0;
+  }
 }

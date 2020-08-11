@@ -2,12 +2,17 @@
   color: @basic-text;
   font-weight: 400;
   font-family: @font-header;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 32px;
 }
 
 .selection__title {
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  margin-top: 27px;
+  margin-bottom: 37px;
 }
 
 .selection__hint {
@@ -15,21 +20,113 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 39px;
 }
 
-.selection__fs {
+.selection__form {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.selection__send {
+  margin-top: 34px;
+  margin-bottom: 21px;
+  width: 280px;
+  border: none;
   font-weight: 400;
   font-size: 16px;
-  line-height: 18px;
-  color: @basic-grey;
+  line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
+  color: @basic-bck;
+  background-color: @basic-theme;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 44px;
+  padding-right: 44px;
+  align-self: center;
+  cursor: pointer;
+  font-family: @font-header;
+}
 
-  &--program {
-    list-style: none;
-    color: @item-title;
+.selection__required {
+  padding-left: 62px;
+  padding-right: 61px;
+  font-family: @font-text;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .selection {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 72px;
   }
 
-  &--additional {
-    color: @basic-text;
+  .selection__title {
+    margin-top: 64px;
+    margin-bottom: 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .selection__form {
+    padding-left: 40px;
+  }
+
+  .selection__hint {
+    margin: 0;
+    margin-bottom: 66px;
+    padding-left: 40px;
+    width: 323px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .selection__send {
+    margin-top: 54px;
+    margin-bottom: 0;
+    flex-grow: 0.5;
+    width: 282px;
+  }
+
+  .selection__required {
+    flex-grow: 0.5;
+    width: 180px;
+    padding-left: 61px;
+    padding-right: 0;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .selection {
+    padding-left: 110px;
+    padding-right: 110px;
+    width: 1220px;
+  }
+
+  .selection__title {
+    margin-top: 77px;
+    margin-bottom: 56px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .selection__hint {
+    margin: 0;
+    margin-bottom: 69px;
+    padding-left: 0;
+  }
+
+  .selection__form {
+    padding-left: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
