@@ -33,6 +33,7 @@
 
 .selection__send {
   margin-top: 34px;
+  margin-bottom: 21px;
   width: 280px;
   border: none;
   font-weight: 400;
@@ -55,17 +56,26 @@
   padding-left: 62px;
   padding-right: 61px;
   font-family: @font-text;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 @media (min-width: @tablet-width) {
   .selection {
     padding-left: 30px;
     padding-right: 30px;
+    margin-bottom: 72px;
   }
 
   .selection__title {
     margin-top: 64px;
     margin-bottom: 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .selection__form {
+    padding-left: 40px;
   }
 
   .selection__hint {
@@ -73,6 +83,24 @@
     margin-bottom: 66px;
     padding-left: 40px;
     width: 323px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .selection__send {
+    margin-top: 54px;
+    margin-bottom: 0;
+    flex-grow: 0.5;
+    width: 282px;
+  }
+
+  .selection__required {
+    flex-grow: 0.5;
+    width: 180px;
+    padding-left: 61px;
+    padding-right: 0;
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
@@ -80,15 +108,25 @@
   .selection {
     padding-left: 110px;
     padding-right: 110px;
+    width: 1220px;
   }
 
   .selection__title {
     margin-top: 77px;
     margin-bottom: 56px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   .selection__hint {
     margin: 0;
     margin-bottom: 69px;
+    padding-left: 0;
+  }
+
+  .selection__form {
+    padding-left: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }

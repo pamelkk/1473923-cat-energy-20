@@ -9,6 +9,7 @@
   padding: 0;
   padding-bottom: 27px;
   border-bottom: 1px solid @social-lines;
+  color: @basic-dark-text;
 }
 
 .fs-name__field {
@@ -20,7 +21,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  flex-grow: 0.5;
+  flex-grow: 1;
   align-self: center;
   min-width: 172px;
   border: 1px solid @border-form;
@@ -49,4 +50,51 @@
 
 .fs-name__row:last-of-type {
   margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .fs-name {
+    border: none;
+    width: 630px;
+    padding-bottom: 0;
+  }
+
+  .fs-name__row {
+    height: 52px;
+    margin-bottom: 20px;
+    width: 630px;
+  }
+
+  .fs-name__field {
+    min-width: 497px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .fs-name__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fs-name {
+    width: 569px;
+  }
+
+  .fs-name__row {
+    width: 569px;
+  }
+
+  .fs-name__field {
+    min-width: 436px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

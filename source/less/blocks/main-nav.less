@@ -19,8 +19,12 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    display: block;
+    display: flex;
     margin-left: 95px;
+    width: 438px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
   }
 
   .main-nav__list {
@@ -42,5 +46,6 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     margin-left: 0;
+    width: 483px;
   }
 }

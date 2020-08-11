@@ -27,6 +27,7 @@
   flex-grow: 1;
   align-self: center;
   min-width: 50px;
+  color: @basic-dark-text;
 }
 
 .fs-contacts__field {
@@ -57,4 +58,72 @@
 
 .fs-contacts__row:last-of-type {
   margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .fs-contacts {
+    width: 630px;
+    margin-top: 71px;
+  }
+
+  .fs-contacts__head {
+    padding-top: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .fs-contacts__field {
+    font-size: 20px;
+    line-height: 30px;
+    min-width: 535px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .fs-contacts__title {
+    font-size: 20px;
+    line-height: 30px;
+    min-width: 63px;
+  }
+
+  .fs-contacts__row {
+    height: 52px;
+    margin-bottom: 20px;
+    width: 630px;
+  }
+
+  .fs-contacts__row:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fs-contacts {
+    margin-top: 65px;
+    flex-direction: row;
+  }
+
+  .fs-contacts__row {
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+
+  .fs-contacts__row:nth-of-type(2n) {
+    margin-left: 78px;
+  }
+
+  .fs-contacts__row:nth-of-type(n+3) {
+    margin-top: 20px;
+  }
+
+  .fs-contacts__head {
+    margin-bottom: 76px;
+    flex-grow: 2;
+  }
+
+  .fs-contacts__field {
+    box-sizing: border-box;
+  }
 }
