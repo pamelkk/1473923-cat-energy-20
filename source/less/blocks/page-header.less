@@ -1,5 +1,10 @@
 .page-header {
   width: 320px;
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  column-gap: 20px;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 .page-header__logo {
@@ -7,6 +12,7 @@
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 18px;
 }
 
 .page-header__link {
@@ -32,6 +38,10 @@
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;
+    grid-template-columns: 1fr repeat(4, 132px) 1fr;
+    column-gap: 60px;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 
   .page-header__open-menu {
@@ -41,7 +51,6 @@
   .page-header__logo {
     padding: 0;
     align-self: center;
-    width: 174px;
   }
 }
 
@@ -51,5 +60,7 @@
     box-sizing: border-box;
     padding-left: 110px;
     padding-right: 110px;
+    grid-template-columns: 1fr repeat(4, 245px) 1fr;
+    column-gap: 80px;
   }
 }

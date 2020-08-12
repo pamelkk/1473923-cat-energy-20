@@ -8,6 +8,10 @@
   position: relative;
   box-sizing: border-box;
   width: 320px;
+  grid-template-columns: repeat(1, 320px);
+  column-gap: 20px;
+  grid-column-start: 1;
+  grid-column-end: -1;
 
   &::before {
     content: "";
@@ -106,6 +110,8 @@
     background-image: none;
     min-height: 800px;
     width: 768px;
+    grid-column-start: 1;
+    grid-column-end: -1;
 
     &::before {
       display: none;
@@ -114,12 +120,15 @@
 
   .header__choose-program {
     width: 244px;
+    align-self: flex-start;
+    margin-left: 117px;
+    font-size: 20px;
+    line-height: 25px;
     padding-top: 14px;
     padding-bottom: 14px;
     padding-right: 26px;
     padding-left: 26px;
-    align-self: flex-start;
-    margin-left: 117px;
+    height: 54px;
   }
 }
 

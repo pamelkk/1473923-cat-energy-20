@@ -7,6 +7,10 @@
   flex-wrap: wrap;
   flex-direction: column;
   background-color: @features-footer;
+  grid-template-columns: repeat(1, 320px);
+  column-gap: 20px;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 .map__text {
@@ -38,6 +42,8 @@
 @media (min-width: @tablet-width) {
   .map {
     width: 768px;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 
   .map__address {

@@ -8,6 +8,10 @@
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
+  grid-template-columns: repeat(1, 320px);
+  column-gap: 20px;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 .catalog__title {
@@ -55,6 +59,8 @@
   .catalog {
     width: 708px;
     padding-left: 30px;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 
   .catalog__list {
