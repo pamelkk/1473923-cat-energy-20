@@ -13,12 +13,21 @@
   font-family: @font-header;
   width: 320px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  column-gap: 20px;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 @media (min-width: @tablet-width) {
   .page-main {
     width: 768px;
     box-sizing: border-box;
+    grid-template-columns: 1fr repeat(4, 132px) 1fr;
+    column-gap: 60px;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 }
 
@@ -26,5 +35,7 @@
   .page-main {
     width: 1440px;
     box-sizing: border-box;
+    grid-template-columns: 1fr repeat(4, 245px) 1fr;
+    column-gap: 80px;
   }
 }

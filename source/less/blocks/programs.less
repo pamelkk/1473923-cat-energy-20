@@ -2,6 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   width: 280px;
+  grid-template-columns: repeat(1, 320px);
+  column-gap: 20px;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -9,6 +15,8 @@
     width: 768px;
     flex-direction: row;
     box-sizing: border-box;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 }
 

@@ -1,6 +1,11 @@
 .footer {
   width: 320px;
   background-color: @features-footer;
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  column-gap: 20px;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 .footer__logo {
@@ -19,6 +24,10 @@
     padding-right: 30px;
     display: flex;
     justify-content: space-between;
+    grid-template-columns: 1fr repeat(4, 132px) 1fr;
+    column-gap: 60px;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 
   .footer__logo {
@@ -32,5 +41,7 @@
     padding-top: 57px;
     padding-left: 110px;
     padding-right: 110px;
+    grid-template-columns: 1fr repeat(4, 245px) 1fr;
+    column-gap: 80px;
   }
 }

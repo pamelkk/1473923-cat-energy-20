@@ -9,6 +9,10 @@
   padding: 20px;
   min-height: 705px;
   box-sizing: border-box;
+  grid-template-columns: repeat(1, 320px);
+  column-gap: 20px;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 .sample__info-block {
@@ -71,6 +75,8 @@
     background-color: transparent;
     margin-left: 30px;
     margin-right: 30px;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 
   .sample__title {
