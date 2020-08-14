@@ -13,11 +13,13 @@
   font-family: @font-header;
   width: 320px;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(1, 320px);
-  column-gap: 20px;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page__body {
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {

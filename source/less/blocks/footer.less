@@ -1,11 +1,9 @@
 .footer {
   width: 320px;
   background-color: @features-footer;
-  display: grid;
-  grid-template-columns: repeat(1, 320px);
-  column-gap: 20px;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer__logo {
