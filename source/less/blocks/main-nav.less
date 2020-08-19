@@ -42,8 +42,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-self: center;
-    grid-column-start: 1;
-    grid-column-end: -1;
   }
 
   .main-nav__list {
@@ -52,6 +50,11 @@
     margin: 0;
     flex-wrap: wrap;
     flex-direction: row;
+  }
+
+  .main-nav__link {
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .main-nav__item {
@@ -70,8 +73,17 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     margin-left: 0;
+    margin-right: 110px;
     width: 483px;
-    grid-column-start: 1;
-    grid-column-end: -1;
+    background-color: transparent;
+  }
+
+  .main-nav-index__link {
+    color: @basic-bck;
+  }
+
+  .main-nav__link {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

@@ -1,0 +1,21 @@
+.page-body {
+  margin: 0;
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-body {
+    width: 768px;
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 132px) 1fr;
+    column-gap: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-body {
+    width: 1440px;
+    grid-template-columns: 30px repeat(4, 245px) 30px;
+    column-gap: 80px;
+  }
+}

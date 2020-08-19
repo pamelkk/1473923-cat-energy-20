@@ -35,6 +35,33 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  margin-left: 46px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -45px;
+    top: -5px;
+    border: 1px solid @border-toggle;
+    cursor: pointer;
+  }
+}
+
+.fs-additional__field {
+  &:checked + .fs-additional__title::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 14px;
+    left: -37px;
+    top: 5px;
+    background-image: url("../../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -43,6 +70,8 @@
     margin-top: 65px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .fs-additional__head {
@@ -59,30 +88,55 @@
     flex-direction: row;
     width: 565px;
     flex-grow: 2;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .fs-additional__item {
     min-width: 68px;
     margin-top: 0;
     display: block;
+    width: 221px;
+
+    &:nth-of-type(n+3) {
+      margin-top: 32px;
+    }
+
+    &:nth-of-type(2n) {
+      margin-left: 123px;
+    }
   }
 
   .fs-additional__title {
     font-size: 20px;
     line-height: 30px;
   }
-
-  .fs-additional__item:nth-of-type(n+3) {
-    margin-top: 32px;
-  }
-  /*
-  .fs-additional__item:nth-of-type(2n) {
-    margin-left: 123px;
-  }*/
 }
 
 @media (min-width: @desktop-width) {
   .fs-additional {
     margin-top: 67px;
+    width: 1220px;
+  }
+
+  .fs-additional__list {
+    width: 1220px;
+    flex-grow: 2;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .fs-additional__item {
+    &:nth-of-type(n+3) {
+      margin-top: 0;
+    }
+
+    &:nth-of-type(2n) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(n+2) {
+      margin-left: 104px;
+    }
   }
 }

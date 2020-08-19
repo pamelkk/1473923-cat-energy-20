@@ -4,11 +4,12 @@
   font-weight: 400;
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 280px 289px;
-  width: 280px;
+  width: 320px;
   height: 289px;
   margin-top: 39px;
   margin-bottom: 35px;
+  align-self: center;
+  margin-left: 20px;
 }
 
 .promo__text {
@@ -42,9 +43,12 @@
     margin-top: 69px;
     margin-bottom: 76px;
     justify-content: space-between;
+    margin-left: 0;
   }
 
   .promo__text {
+    width: 161px;
+
     &::before {
       width: 80px;
       height: 82px;
@@ -57,16 +61,19 @@
 @media (min-width: @desktop-width) {
   .promo {
     width: 245px;
+    box-sizing: border-box;
     height: 289px;
-    margin-left: 60px;
-    flex-grow: 0;
+    margin-left: 80px;
     margin-top: 0;
     margin-bottom: 86px;
+    display: flex;
+    flex-direction: column;
   }
 
   .promo__text {
     padding-top: 184px;
     padding-left: 41px;
     padding-right: 43px;
+    align-self: center;
   }
 }

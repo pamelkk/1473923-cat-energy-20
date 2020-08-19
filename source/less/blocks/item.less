@@ -3,9 +3,13 @@
   margin-top: 19px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   width: 282px;
   min-height: 190px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .item__title {
@@ -36,11 +40,9 @@
   line-height: 20px;
   text-transform: uppercase;
   position: relative;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 94px;
-  padding-right: 94px;
-  background-color: @features-footer;
+  padding-left: 38px;
+  padding-right: 37px;
+  width: 204px;
 
   &::before {
     content: "";
@@ -48,7 +50,7 @@
     background-image: url("../../img/icon-plus.svg");
     width: 30px;
     height: 30px;
-    top: -43px;
+    top: -53px;
     left: 120px;
   }
 }
@@ -58,35 +60,42 @@
   line-height: 16px;
   color: @basic-dark-text;
   font-family: @font-text;
-  margin-top: 8px;
-  margin-bottom: 21px;
+  margin-left: 28px;
 }
 
 .item__all-link {
   font-weight: 400;
   font-size: 16px;
+  box-sizing: border-box;
   line-height: 0;
+  height: 40px;
+  width: 279px;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   color: @basic-dark-text;
   background-color: @features-footer;
-}
-
-
-.item:first-of-type {
-  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 94px;
+  padding-right: 94px;
 }
 
 .item:last-of-type {
-  margin-top: 104px;
+  margin-top: 90px;
+  min-height: 158px;
+  box-sizing: border-box;
 }
 
 .item__photo {
-  flex-grow: 0.5;
+  align-self: center;
+  padding-left: 30px;
+  height: 112px;
+  width: 139px;
 }
 
 .item__card {
-  flex-grow: 0.5;
+  width: 142px;
 }
 
 
@@ -102,29 +111,41 @@
 
 @media (min-width: @tablet-width) {
   .item {
-    width: 252px;
+    width: 324px;
     min-height: 511px;
     margin-top: 0;
     flex-direction: column;
     justify-content: center;
-  }
 
-  .item:nth-of-type(2n) {
-    margin-left: 60px;
-  }
+    &:nth-of-type(2n) {
+      margin-left: 60px;
+    }
 
-  .item:nth-of-type(n+3) {
-    margin-top: 59px;
+    &:nth-of-type(n+3) {
+      margin-top: 59px;
+    }
+
+    &:last-of-type {
+      border: 2px solid @features-footer;
+      height: 429px;
+      box-sizing: border-box;
+      margin-top: 142px;
+    }
   }
 
   .item__photo {
     align-self: center;
+    padding: 0;
+    height: 168px;
+    width: 200px;
   }
 
   .item__all-link {
     height: 40px;
     box-sizing: border-box;
     align-self: center;
+    margin-top: auto;
+    margin-bottom: 40px;
   }
 
   .item__card {
@@ -138,53 +159,96 @@
     margin: 0 auto;
     padding-top: 34px;
     padding-bottom: 21px;
-  }
-
-  .item:last-of-type {
-    border: 2px solid @features-footer;
-    height: 429px;
-    box-sizing: border-box;
-    margin-top: 142px;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .item__all-text {
     width: 134px;
     align-self: center;
+    box-sizing: content-box;
+    text-align: center;
+    margin-top: 161px;
+    font-size: 20px;
+    line-height: 22px;
 
     &::before {
       width: 60px;
       height: 60px;
-      top: -79px;
-      left: 30px;
+      top: -100px;
+      left: 70px;
+    }
+  }
+
+  .item__options {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 0;
+  }
+
+  .item__line {
+    margin-top: 14px;
+
+    &:first-of-type {
+      margin-top: 0;
     }
   }
 
   .item__all-description {
+    margin: 0;
     margin-top: 23px;
-    margin-bottom: 87px;
     align-self: center;
+    width: 167px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .item {
     width: 245px;
+
+    &:nth-of-type(n+1) {
+      margin-right: 80px;
+    }
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(2n) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(n+3) {
+      margin-top: 0;
+    }
+
+    &:nth-of-type(n+5) {
+      margin-top: 63px;
+    }
+
+    &:last-of-type {
+      margin-top: 145px;
+    }
   }
 
-  .item:nth-of-type(n+1) {
-    margin-right: 80px;
+  .item__card {
+    width: 169px;
   }
 
-  .item.item:nth-of-type(4n) {
-    margin-top: 63px;
-    margin-right: 0;
+  .item__title {
+    padding-bottom: 22px;
+    width: 145px;
+    line-height: 21px;
   }
 
-  .catalog__list {
-    margin-left: 0;
-  }
-
-  .item:nth-of-type(2n) {
-    margin-left: 0;
+  .item__all-link {
+    width: 169px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 39px;
+    padding-right: 39px;
   }
 }

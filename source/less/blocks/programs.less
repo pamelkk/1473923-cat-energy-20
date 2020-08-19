@@ -2,21 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   width: 280px;
-  grid-template-columns: repeat(1, 320px);
-  column-gap: 20px;
-  grid-column-start: 1;
-  grid-column-end: -1;
-  padding-left: 20px;
-  padding-right: 20px;
+  align-self: center;
 }
 
 @media (min-width: @tablet-width) {
   .programs {
-    width: 768px;
+    width: 708px;
     flex-direction: row;
     box-sizing: border-box;
-    grid-column-start: 1;
-    grid-column-end: -1;
   }
 }
 
@@ -25,7 +18,5 @@
     width: 1440px;
     box-sizing: border-box;
     margin-top: 80px;
-    margin-left: 102px;
-    margin-right: 102px;
   }
 }

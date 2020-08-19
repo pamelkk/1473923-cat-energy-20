@@ -16,30 +16,26 @@
 
 @media (min-width: @tablet-width) {
   .footer {
-    width: 708px;
+    width: 768px;
     padding-top: 55px;
-    padding-left: 30px;
-    padding-right: 30px;
-    display: flex;
+    padding-bottom: 51px;
+    flex-direction: row;
     justify-content: space-between;
-    grid-template-columns: 1fr repeat(4, 132px) 1fr;
-    column-gap: 60px;
-    grid-column-start: 1;
+    grid-column-start: 2;
     grid-column-end: -1;
   }
 
   .footer__logo {
     padding: 0;
+    align-self: center;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer {
     width: 1220px;
-    padding-top: 57px;
-    padding-left: 110px;
-    padding-right: 110px;
-    grid-template-columns: 1fr repeat(4, 245px) 1fr;
-    column-gap: 80px;
+    box-sizing: border-box;
+    padding-top: 56px;
+    padding-bottom: 48px;
   }
 }

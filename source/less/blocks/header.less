@@ -91,7 +91,7 @@
     width: 414px;
     margin-top: 62px;
     align-self: flex-start;
-    margin-left: 117px;
+    margin-left: 87px;
   }
 
   .header__slogan {
@@ -103,15 +103,16 @@
     margin-bottom: 49px;
     text-align: left;
     align-self: flex-start;
-    margin-left: 117px;
+    margin-left: 87px;
   }
 
   .header {
     background-image: none;
     min-height: 800px;
-    width: 768px;
+    width: 708px;
     grid-column-start: 1;
     grid-column-end: -1;
+    align-self: center;
 
     &::before {
       display: none;
@@ -121,7 +122,7 @@
   .header__choose-program {
     width: 244px;
     align-self: flex-start;
-    margin-left: 117px;
+    margin-left: 87px;
     font-size: 20px;
     line-height: 0;
     padding-top: 14px;
@@ -138,20 +139,21 @@
 
 @media (min-width: @desktop-width) {
   .header {
-    top: 0;
+    width: 1440px;
+    align-self: center;
 
     &::before {
       display: block;
       width: 720px;
       height: 696px;
       position: absolute;
-      top: 0;
+      top: -98px;
       left: 720px;
     }
   }
 
   .header__title {
-    margin-top: 111px;
+    margin-top: 80px;
     z-index: 2;
   }
 
