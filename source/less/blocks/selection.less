@@ -1,14 +1,12 @@
 .selection {
+  width: 280px;
   color: @basic-text;
   font-weight: 400;
   font-family: @font-header;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-bottom: 32px;
-  grid-template-columns: repeat(1, 320px);
-  column-gap: 20px;
   grid-column-start: 1;
   grid-column-end: -1;
+  align-self: center;
 }
 
 .selection__title {
@@ -66,11 +64,10 @@
 
 @media (min-width: @tablet-width) {
   .selection {
-    padding-left: 30px;
-    padding-right: 30px;
     margin-bottom: 72px;
     grid-column-start: 1;
     grid-column-end: -1;
+    width: 709px;
   }
 
   .selection__title {
@@ -96,30 +93,29 @@
   .selection__send {
     margin-top: 54px;
     margin-bottom: 0;
-    flex-grow: 0.5;
     width: 282px;
+    flex-grow: 1;
+    font-size: 20px;
   }
 
   .selection__required {
-    flex-grow: 0.5;
     width: 180px;
     padding-left: 61px;
     padding-right: 0;
     font-size: 16px;
     line-height: 16px;
+    flex-grow: 0.5;
   }
 }
 
 @media (min-width: @desktop-width) {
   .selection {
-    padding-left: 110px;
-    padding-right: 110px;
     width: 1220px;
   }
 
   .selection__title {
     margin-top: 77px;
-    margin-bottom: 56px;
+    margin-bottom: 53px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -134,5 +130,15 @@
     padding-left: 0;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .selection__send {
+    margin-top: 61px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 188px;
+    padding-right: 188px;
+    width: 568px;
+    box-sizing: border-box;
   }
 }

@@ -1,0 +1,27 @@
+.page-body {
+  margin: 0;
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-body {
+    width: 768px;
+    display: grid;
+    grid-template-columns: repeat(4, 132px);
+    column-gap: 60px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-body {
+    width: 1440px;
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    margin-left: 110px;
+  }
+
+  .page {
+    display: flex;
+  }
+}
