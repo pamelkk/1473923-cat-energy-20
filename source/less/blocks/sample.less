@@ -34,6 +34,7 @@
   margin-left: 20px;
   margin-bottom: 33px;
   align-self: flex-start;
+  font-weight: 400;
 }
 
 .sample__text {
@@ -49,6 +50,43 @@
   align-self: center;
 }
 
+.sample__target {
+  display: block;
+  width: 77px;
+  padding-top: 9px;
+  padding-left: 22px;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 87px;
+    height: 31px;
+    background-color: @sample-bck-mob;
+    z-index: -1;
+  }
+}
+
+.sample__volume {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: @basic-text;
+  border: 1px solid @border-toggle;
+  border-radius: 3px;
+  padding-top: 15px;
+  padding-bottom: 18px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: @font-header;
+  width: 124px;
+  box-sizing: border-box;
+  height: 56px;
+}
+
 .sample__info {
   font-size: 12px;
   line-height: 12px;
@@ -57,12 +95,11 @@
   margin: 0;
   width: 124px;
   text-align: center;
-}
 
-.sample__volume {
-  font-size: 24px;
-  line-height: 24px;
-  text-align: center;
+  &:nth-of-type(2) .sample__volume {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .sample__expenses {
@@ -92,6 +129,7 @@
   .sample__info {
     font-size: 14px;
     line-height: 14px;
+    width: 162px;
   }
 
   .sample__title {
@@ -109,12 +147,37 @@
     margin-left: 145px;
     font-size: 20px;
     line-height: 20px;
+    text-align: right;
+  }
+
+  .sample__target {
+    padding-left: 40px;
+
+    &::before {
+      top: 0;
+      left: 25px;
+      width: 115px;
+      height: 50px;
+      background-color: @basic-bck;
+    }
   }
 
   .sample__text {
     margin: 0;
     font-size: 16px;
     line-height: 24px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 381px;
+      left: -30px;
+      width: 768px;
+      height: 462px;
+      background-color: @sample-bck-mob;
+      z-index: -1;
+    }
   }
 
   .sample__photo {
@@ -139,7 +202,7 @@
 @media (min-width: @desktop-width) {
   .sample {
     width: 1440px;
-    min-height: 656px;
+    min-height: 598px;
     align-self: center;
     padding: 0;
     position: relative;
@@ -148,6 +211,14 @@
 
   .sample__text {
     width: 436px;
+
+    &::before {
+      top: -70px;
+      left: -110px;
+      width: 1440px;
+      height: 462px;
+      background-color: @features-footer;
+    }
   }
 
   .sample__expenses {
@@ -171,5 +242,19 @@
     height: 72px;
     box-sizing: border-box;
     margin-top: 69px;
+  }
+
+  .sample__target {
+    padding-left: 10px;
+    width: auto;
+    max-width: 140px;
+
+    &::before {
+      top: 0;
+      left: 20px;
+      width: 125px;
+      height: 80px;
+      background-color: @features-footer;
+    }
   }
 }

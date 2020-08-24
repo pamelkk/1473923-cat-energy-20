@@ -21,7 +21,7 @@
 }
 
 .page-header__open-menu {
-  background-image: url("../../img/icon-mobile-menu.svg");
+  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   border: none;
   background-color: transparent;
@@ -52,6 +52,11 @@
     padding: 0;
     align-self: center;
   }
+
+  .page-header__link {
+    width: 174px;
+    height: 52px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -59,7 +64,12 @@
     width: 1330px;
     box-sizing: border-box;
     padding-top: 55px;
-    grid-column-start: 2;
-    grid-column-end: -2;
+  }
+
+  .page-header__link {
+    background-position: center 0;
+    background-size: cover;
+    width: 202px;
+    height: 59px;
   }
 }

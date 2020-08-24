@@ -23,11 +23,17 @@
     top: 0;
     left: 0;
     z-index: -2;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
   }
 }
 
 
 .header__product {
+  margin-left: 20px;
   margin-top: 29px;
   align-self: center;
 }
@@ -77,10 +83,12 @@
 @media (min-width: @tablet-width) {
   .header__product {
     position: absolute;
-    top: 250px;
-    left: 150px;
+    top: 255px;
+    left: 0;
     z-index: -1;
     margin-top: 0;
+    width: 709px;
+    height: 609px;
   }
 
   .header__title {
@@ -111,6 +119,7 @@
     min-height: 800px;
     width: 708px;
     align-self: center;
+    margin-bottom: 60px;
 
     &::before {
       display: none;
@@ -146,7 +155,13 @@
       height: 696px;
       position: absolute;
       top: -98px;
-      left: 720px;
+      left: 610px;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 
@@ -166,8 +181,10 @@
   }
 
   .header__product {
-    top: 143px;
-    left: 558px;
+    top: 32px;
+    left: 448px;
     z-index: 1;
+    width: 552px;
+    height: 499px;
   }
 }
