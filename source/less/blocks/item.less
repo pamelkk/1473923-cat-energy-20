@@ -1,15 +1,13 @@
 .item {
   font-family: @font-header;
-  margin-top: 19px;
+  padding-top: 8px;
+  padding-bottom: 11px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 282px;
   min-height: 190px;
-
-  &:first-of-type {
-    margin-top: 0;
-  }
+  border-bottom: 1px solid @button-pressed;
 }
 
 .item__title {
@@ -89,8 +87,7 @@
 
 .item__photo {
   align-self: center;
-  height: 112px;
-  width: 139px;
+  background-size: 280px 288px;
 }
 
 .item__card {

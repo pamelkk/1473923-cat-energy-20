@@ -16,30 +16,11 @@
   font-weight: 400;
   margin: 0;
   padding-top: 27px;
-  padding-bottom: 49px;
+  padding-bottom: 41px;
   align-self: left;
   margin-left: 20px;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 27px;
-    left: -20px;
-    width: 320px;
-    height: 1px;
-    color: @social-lines;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: -20px;
-    width: 320px;
-    height: 1px;
-    color: @social-lines;
-  }
+  border-top: 1px solid @button-pressed;
+  border-bottom: 1px solid @button-pressed;
 }
 
 .catalog__list {

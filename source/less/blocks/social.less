@@ -1,36 +1,20 @@
 .social {
+  width: 280px;
   font-family: @font-header;
-  margin-bottom: 30px;
+  align-self: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-top: 1px solid @social-lines;
+  border-bottom: 1px solid @social-lines;
 }
 
 .social__list {
   list-style: none;
-  position: relative;
   display: flex;
   padding: 0;
   margin: 0;
   justify-content: center;
-
-  &::after,
-  &::before {
-    content: "";
-    width: 280px;
-    height: 1px;
-    color: @social-lines;
-    position: absolute;
-  }
-
-  &::before {
-    top: -20px;
-    left: 20px;
-  }
-
-  &::after {
-    top: 43px;
-    left: 20px;
-  }
 }
-
 
 .social__item {
   margin-left: 35px;
@@ -78,5 +62,6 @@
   .social {
     margin-bottom: 0;
     align-self: center;
+    border: none;
   }
 }
