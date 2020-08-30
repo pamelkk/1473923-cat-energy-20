@@ -19,6 +19,17 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @basic-theme;
+    width: 120px;
+    height: 2px;
+    top: 15px;
+    left: 160px;
+  }
 }
 
 .fs-additional__item {
@@ -37,6 +48,21 @@
   text-transform: uppercase;
   margin-left: 46px;
   position: relative;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+
+    &::before {
+      border-color: @radio-active;
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: @border-checkbox;
+    }
+  }
 
   &::before {
     content: "";
@@ -80,6 +106,23 @@
     min-width: 211px;
     font-size: 36px;
     line-height: 36px;
+
+    &::after {
+      width: 450px;
+      height: 2px;
+      top: 20px;
+      left: 245px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: @basic-theme;
+      width: 30px;
+      height: 2px;
+      top: 20px;
+      left: -72px;
+    }
   }
 
   .fs-additional__list {
@@ -137,6 +180,22 @@
 
     &:nth-of-type(n+2) {
       margin-left: 104px;
+    }
+  }
+
+  .fs-additional__head {
+    &::after {
+      width: 1080px;
+      height: 2px;
+      top: 20px;
+      right: -835px;
+    }
+
+    &::before {
+      width: 70px;
+      height: 2px;
+      top: 20px;
+      left: -112px;
     }
   }
 }

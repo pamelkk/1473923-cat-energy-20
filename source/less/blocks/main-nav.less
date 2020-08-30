@@ -32,6 +32,16 @@
   padding-top: 22px;
   padding-bottom: 24px;
   text-align: center;
+
+  &:not(.main-nav-loc__item) {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -63,11 +73,19 @@
     margin-left: 35px;
     border: none;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 8px;
   }
 
   .main-nav__item:first-of-type {
     margin-left: 0;
+  }
+
+  .main-nav-loc__item {
+    border-bottom: 2px solid @basic-theme;
+  }
+
+  .main-nav-loc-index__item {
+    border-bottom: 2px solid @basic-theme;
   }
 }
 
@@ -86,5 +104,9 @@
   .main-nav__link {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .main-nav-loc-index__item {
+    border-bottom: 2px solid @basic-bck;
   }
 }

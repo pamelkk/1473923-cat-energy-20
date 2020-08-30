@@ -4,9 +4,14 @@
   align-self: center;
   flex-direction: column;
   width: 282px;
-  margin-top: 13px;
-  margin-bottom: 19px;
+  padding-top: 13px;
+  padding-bottom: 19px;
   flex-wrap: wrap;
+  border-bottom: 1px solid @border-toggle;
+
+  &:first-of-type {
+    border-top: 1px solid @border-toggle;
+  }
 }
 
 .add-item__title {

@@ -66,6 +66,15 @@
   padding-left: 44px;
   box-sizing: border-box;
   align-self: center;
+
+  &:hover {
+    background-color: @button-hover;
+  }
+
+  &:active {
+    background-color: @button-hover;
+    color: @button-active-green;
+  }
 }
 
 .header__title {
@@ -84,7 +93,7 @@
   .header__product {
     position: absolute;
     top: 255px;
-    left: 0;
+    left: -20px;
     z-index: -1;
     margin-top: 0;
     width: 709px;
@@ -148,13 +157,15 @@
   .header {
     width: 1440px;
     align-self: center;
+    min-height: 581px;
+    margin-bottom: 0;
 
     &::before {
       display: block;
       width: 720px;
       height: 696px;
       position: absolute;
-      top: -98px;
+      top: -115px;
       left: 610px;
       background-image: url("../img/index-background-desktop@1x.jpg");
 
@@ -182,7 +193,7 @@
 
   .header__product {
     top: 32px;
-    left: 448px;
+    left: 430px;
     z-index: 1;
     width: 552px;
     height: 499px;

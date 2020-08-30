@@ -15,6 +15,17 @@
   padding-top: 28px;
   padding-bottom: 35px;
   font-weight: 400;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @basic-theme;
+    width: 53px;
+    height: 2px;
+    top: 42px;
+    right: 0;
+  }
 }
 
 .add-catalog__list {
@@ -42,6 +53,15 @@
   cursor: pointer;
   width: 280px;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: @button-hover;
+  }
+
+  &:active {
+    background-color: @button-hover;
+    color: @button-active-green;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -59,6 +79,23 @@
     margin-left: 37px;
     font-size: 36px;
     line-height: 36px;
+
+    &::after {
+      width: 328px;
+      height: 2px;
+      top: 50px;
+      right: -300px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: @basic-theme;
+      width: 30px;
+      height: 2px;
+      top: 50px;
+      left: -67px;
+    }
   }
 
   .add-catalog__button {
@@ -82,6 +119,20 @@
     text-align: left;
     min-width: 1400px;
     margin-left: 0;
+
+    &::after {
+      width: 957px;
+      height: 2px;
+      top: 50px;
+      left: 370px;
+    }
+
+    &::before {
+      width: 70px;
+      height: 2px;
+      top: 50px;
+      left: -110px;
+    }
   }
 
   .add-catalog__button {

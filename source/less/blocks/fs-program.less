@@ -24,6 +24,21 @@
   text-transform: uppercase;
   margin-left: 45px;
   position: relative;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+
+    &::before {
+      border-color: @radio-active;
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: @border-checkbox;
+    }
+  }
 
   &::before {
     content: "";
@@ -52,7 +67,7 @@
     position: absolute;
     width: 13px;
     height: 13px;
-    left: -36px;
+    left: -36.5px;
     top: 4px;
     border: 1px solid @basic-theme;
     background-color: @basic-theme;
@@ -75,6 +90,8 @@
     padding-right: 28px;
     padding-top: 25px;
     padding-bottom: 29px;
+    height: 200px;
+    box-sizing: border-box;
   }
 
   .fs-program__title {
@@ -88,5 +105,9 @@
     width: 568px;
     margin-left: 80px;
     margin-top: 0;
+  }
+
+  .fs-program__list {
+    padding-bottom: 25px;
   }
 }

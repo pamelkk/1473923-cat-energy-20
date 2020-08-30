@@ -66,6 +66,9 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/advantage-leaf@2x.png");
+        width: 100px;
+        height: 100px;
+        background-size: 50px 50px;
       }
     }
   }
@@ -81,6 +84,9 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/advantage-powder@2x.png");
+        width: 100px;
+        height: 100px;
+        background-size: 50px 50px;
       }
     }
   }
@@ -96,6 +102,9 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/advantage-dining@2x.png");
+        width: 100px;
+        height: 100px;
+        background-size: 50px 50px;
       }
     }
   }
@@ -111,6 +120,9 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/advantage-clock@2x.png");
+        width: 100px;
+        height: 100px;
+        background-size: 50px 50px;
       }
     }
   }
@@ -158,8 +170,8 @@
 
     &:nth-of-type(1) {
       &::after {
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
         top: 55px;
         left: 15px;
       }
@@ -167,8 +179,8 @@
 
     &:nth-of-type(2) {
       &::after {
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
         top: 55px;
         left: 15px;
       }
@@ -176,8 +188,8 @@
 
     &:nth-of-type(3) {
       &::after {
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
         top: 55px;
         left: 15px;
       }
@@ -185,8 +197,8 @@
 
     &:nth-of-type(4) {
       &::after {
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
         top: 55px;
         left: 15px;
       }
@@ -212,53 +224,53 @@
     position: relative;
 
     &::before {
+      content: "";
       position: absolute;
       z-index: -1;
     }
+  }
 
-    &:nth-of-type(1) {
-      &::before {
-        content: "";
-        width: 112px;
-        height: 280px;
-        top: -110px;
-        left: 118px;
-        background-image: url("../img/1.svg");
-        background-repeat: no-repeat;
-      }
+  .count-1 {
+    &::before {
+      width: 112px;
+      height: 280px;
+      top: -110px;
+      left: 118px;
+      background-image: url("../img/1.svg");
+      background-repeat: no-repeat;
     }
+  }
 
-    &:nth-of-type(2) {
-      &::before {
-        width: 134px;
-        height: 280px;
-        top: 55px;
-        left: 15px;
-        background-image: url("../img/2.svg");
-        background-repeat: no-repeat;
-      }
+  .count-2 {
+    &::before {
+      width: 134px;
+      height: 280px;
+      top: -110px;
+      left: 118px;
+      background-image: url("../img/2.svg");
+      background-repeat: no-repeat;
     }
+  }
 
-    &:nth-of-type(3) {
-      &::before {
-        width: 134px;
-        height: 280px;
-        top: 55px;
-        left: 15px;
-        background-image: url("../img/3.svg");
-        background-repeat: no-repeat;
-      }
+  .count-3 {
+    &::before {
+      width: 134px;
+      height: 280px;
+      top: -110px;
+      left: 118px;
+      background-image: url("../img/3.svg");
+      background-repeat: no-repeat;
     }
+  }
 
-    &:nth-of-type(4) {
-      &::before {
-        width: 136px;
-        height: 280px;
-        top: 55px;
-        left: 15px;
-        background-image: url("../img/4.svg");
-        background-repeat: no-repeat;
-      }
+  .count-4 {
+    &::before {
+      width: 136px;
+      height: 280px;
+      top: -110px;
+      left: 118px;
+      background-image: url("../img/4.svg");
+      background-repeat: no-repeat;
     }
   }
 }

@@ -1,5 +1,5 @@
 .selection {
-  width: 280px;
+  width: 320px;
   color: @basic-text;
   font-weight: 400;
   font-family: @font-header;
@@ -7,6 +7,8 @@
   grid-column-start: 1;
   grid-column-end: -1;
   align-self: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .selection__title {
@@ -15,6 +17,7 @@
   line-height: 36px;
   margin-top: 27px;
   margin-bottom: 37px;
+  padding-left: 20px;
 }
 
 .selection__hint {
@@ -24,12 +27,15 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 39px;
+  padding-left: 20px;
 }
 
 .selection__form {
+  width: 320px;
   border: none;
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
 }
 
 
@@ -52,6 +58,15 @@
   align-self: center;
   cursor: pointer;
   font-family: @font-header;
+
+  &:hover {
+    background-color: @button-hover;
+  }
+
+  &:active {
+    background-color: @button-hover;
+    color: @button-active-green;
+  }
 }
 
 .selection__required {
@@ -75,10 +90,12 @@
     margin-bottom: 54px;
     font-size: 60px;
     line-height: 60px;
+    padding-left: 0;
   }
 
   .selection__form {
     padding-left: 40px;
+    width: 630px;
   }
 
   .selection__hint {
@@ -96,6 +113,10 @@
     width: 282px;
     flex-grow: 1;
     font-size: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 
   .selection__required {
@@ -110,7 +131,7 @@
 
 @media (min-width: @desktop-width) {
   .selection {
-    width: 1220px;
+    width: 1440px;
   }
 
   .selection__title {
@@ -130,6 +151,7 @@
     padding-left: 0;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 1220px;
   }
 
   .selection__send {

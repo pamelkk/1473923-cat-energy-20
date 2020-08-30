@@ -13,6 +13,17 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @basic-theme;
+    width: 140px;
+    height: 2px;
+    top: 15px;
+    left: 140px;
+  }
 }
 
 .fs-comments__field {
@@ -29,6 +40,18 @@
   padding-bottom: 13px;
   padding-left: 15px;
   padding-right: 12px;
+
+  &:hover {
+    border-color: @border-toggle;
+  }
+
+  &:active {
+    border: 2px solid @basic-dark-text;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 14px;
+    padding-right: 11px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -41,6 +64,23 @@
     margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
+
+    &::after {
+      width: 470px;
+      height: 2px;
+      top: 20px;
+      left: 225px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: @basic-theme;
+      width: 30px;
+      height: 2px;
+      top: 20px;
+      left: -72px;
+    }
   }
 
   .fs-comments__field {
@@ -51,6 +91,13 @@
     padding-left: 19px;
     padding-right: 19px;
     width: 631px;
+
+    &:active {
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
   }
 }
 
@@ -62,5 +109,21 @@
 
   .fs-comments__field {
     width: 1220px;
+  }
+
+  .fs-comments__head {
+    &::after {
+      width: 1100px;
+      height: 2px;
+      top: 20px;
+      right: -830px;
+    }
+
+    &::before {
+      width: 70px;
+      height: 2px;
+      top: 20px;
+      left: -112px;
+    }
   }
 }

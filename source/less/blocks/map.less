@@ -37,7 +37,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: @basic-bck;
+  background-color: @features-footer;
   position: relative;
 
   &::before {
@@ -53,6 +53,10 @@
   }
 }
 
+.map__index {
+  background-color: @basic-bck;
+}
+
 .map__photo {
   background-color: @features-footer;
 }
@@ -62,6 +66,10 @@
     width: 768px;
     background-color: transparent;
     align-self: center;
+  }
+
+  .map__picture {
+    height: 400px;
   }
 
   .map__address {
@@ -102,6 +110,7 @@
   .map {
     width: 1440px;
     position: relative;
+    margin-right: 218px;
   }
 
   .map__address {
@@ -110,6 +119,7 @@
     left: 110px;
     padding: 60px;
     width: 570px;
+    background-color: @basic-bck;
 
     &::before {
       top: 0;
@@ -124,7 +134,7 @@
   }
 
   .map__photo {
-    width: 1220px;
+    width: 1440px;
     height: 400px;
   }
 }
