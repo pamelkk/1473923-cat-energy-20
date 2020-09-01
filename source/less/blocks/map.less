@@ -7,10 +7,16 @@
   flex-wrap: wrap;
   flex-direction: column;
   background-color: @features-footer;
-  grid-template-columns: repeat(1, 320px);
-  column-gap: 20px;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  position: relative;
+}
+
+.map__iframe {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: 2;
+  width: 320px;
+  height: 362px;
 }
 
 .map__text {
@@ -66,6 +72,7 @@
     width: 768px;
     background-color: transparent;
     align-self: center;
+    display: flex;
   }
 
   .map__picture {
@@ -91,6 +98,7 @@
   .map__photo {
     width: 768px;
     height: 400px;
+    overflow: hidden;
   }
 
   .map__text {
@@ -104,13 +112,19 @@
     font-size: 20px;
     line-height: 21px;
   }
+
+  .map__iframe {
+    top: 186px;
+    width: 768px;
+    height: 400px;
+    overflow: hidden;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .map {
     width: 1440px;
     position: relative;
-    margin-right: 218px;
   }
 
   .map__address {
@@ -120,6 +134,7 @@
     padding: 60px;
     width: 570px;
     background-color: @basic-bck;
+    z-index: 3;
 
     &::before {
       top: 0;
@@ -136,5 +151,12 @@
   .map__photo {
     width: 1440px;
     height: 400px;
+  }
+
+  .map__iframe {
+    top: 0;
+    width: 100vw;
+    height: 400px;
+    overflow: hidden;
   }
 }

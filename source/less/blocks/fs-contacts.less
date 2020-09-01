@@ -126,20 +126,23 @@
     line-height: 36px;
 
     &::after {
-      width: 145px;
+      width: 100vw;
       height: 2px;
       top: 20px;
-      right: -182px;
+      left: -69px;
+      overflow: hidden;
+      z-index: -2;
     }
 
     &::before {
       content: "";
       position: absolute;
-      background-color: @basic-theme;
-      width: 30px;
-      height: 2px;
-      top: 20px;
-      left: -70px;
+      background-color: @basic-bck;
+      width: 593px;
+      height: 36px;
+      top: 0;
+      left: -30px;
+      z-index: -1;
     }
   }
 
@@ -222,17 +225,16 @@
     flex-grow: 2;
 
     &::after {
-      width: 778px;
-      height: 2px;
-      top: 20px;
-      right: -815px;
-    }
-
-    &::before {
-      width: 70px;
+      width: 100vw;
       height: 2px;
       top: 20px;
       left: -110px;
+    }
+
+    &::before {
+      width: 592px;
+      top: 0;
+      left: -40px;
     }
   }
 

@@ -12,9 +12,6 @@
     <div class="page-header__logo page-header__logo-active">
       <a class="page-header__link">
         <picture>
-          <source type="image/webp" media="(min-width: 1200px)" srcset="img/logo-desktop.webp">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet.webp">
-          <source type="image/webp" srcset="img/logo-mobile.webp">
           <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg" />
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
           <img class="page-header__photo" src="img/logo-mobile.svg" width="190" height="38"
@@ -41,12 +38,12 @@
     <div class="page-main__header header">
       <h1 class="header__title">Функциональное питание для котов</h1>
       <p class="header__slogan">Занялся собой? Займись котом!</p>
-      <picture>
+      <picture><!--
         <source type="image/webp" media="(min-width: 1200px)"
           srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)"
           srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+        <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">-->
         <source media="(min-width: 1200px)" srcset="
               img/index-can-desktop@1x.png 1x,
               img/index-can-desktop@2x.png 2x
@@ -118,12 +115,12 @@
         </p>
       </div>
       <p class="sample__expenses">Затраты на питание: <span class="sample__price">15 000 руб.</span></p>
-      <picture>
+      <picture><!--
         <source type="image/webp" media="(min-width: 1200px)"
           srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)"
           srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+        <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">-->
         <source media="(min-width: 1200px)" srcset="
               img/before-desktop@1x.png 1x,
               img/before-desktop@2x.png 2x
@@ -144,12 +141,22 @@
           ул.Большая Конюшенная, д.19/8 Санкт-Петербург
         </address>
       </div>
-      <picture class="map__picture">
+      <iframe class="map__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.207512053241!2d30.323046999999995!3d59.938717000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1593374394802!5m2!1sru!2sru"
+          width="1440"
+          height="400"
+          style="border: 0;"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+          title="Офис компании по адресу: ул. Большая Конюшенная 19/8, Санкт-Петербург"
+        ></iframe>
+      <picture class="map__picture"><!--
         <source type="image/webp" media="(min-width: 1200px)"
           srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)"
           srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">-->
         <source media="(min-width: 1200px)" srcset="
               img/bg-map-desktop@1x.png 1x,
               img/bg-map-desktop@2x.png 2x
@@ -161,10 +168,10 @@
   </main>
   <footer class="footer">
     <div class="footer__logo">
-      <picture>
+      <picture><!--
         <source type="image/webp" media="(min-width: 1200px)" srcset="img/logo-footer.webp 1x">
         <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-footer.webp 1x">
-        <source type="image/webp" srcset="img/logo-footer.webp 1x">
+        <source type="image/webp" srcset="img/logo-footer.webp 1x">-->
         <img src="img/logo-footer.svg" width="128" height="23" alt="Изображение нашего логотипа" /></picture>
     </div>
     <div class="footer__social social">

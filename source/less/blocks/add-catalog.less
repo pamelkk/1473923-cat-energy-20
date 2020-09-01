@@ -80,21 +80,24 @@
     font-size: 36px;
     line-height: 36px;
 
+
     &::after {
-      width: 328px;
+      width: 100vw;
       height: 2px;
       top: 50px;
-      right: -300px;
+      left: -67px;
+      z-index: -2;
     }
 
     &::before {
       content: "";
       position: absolute;
-      background-color: @basic-theme;
-      width: 30px;
-      height: 2px;
-      top: 50px;
-      left: -67px;
+      background-color: @basic-bck;
+      width: 411px;
+      height: 36px;
+      top: 20px;
+      left: -40px;
+      z-index: -1;
     }
   }
 
@@ -107,7 +110,7 @@
 
 @media (min-width: @desktop-width) {
   .add-catalog {
-    width: 1440px;
+    width: 1220px;
     display: flex;
     flex-wrap: wrap;
     box-sizing: content-box;
@@ -117,21 +120,21 @@
   .add-catalog__title {
     padding-bottom: 81px;
     text-align: left;
-    min-width: 1400px;
+    min-width: 1200px;
     margin-left: 0;
 
     &::after {
-      width: 957px;
-      height: 2px;
-      top: 50px;
-      left: 370px;
-    }
-
-    &::before {
-      width: 70px;
+      width: 100vw;
       height: 2px;
       top: 50px;
       left: -110px;
+      overflow: hidden;
+    }
+
+    &::before {
+      width: 413px;
+      top: 18px;
+      left: -40px;
     }
   }
 

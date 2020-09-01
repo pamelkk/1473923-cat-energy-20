@@ -84,7 +84,7 @@
     height: 14px;
     left: -37px;
     top: 5px;
-    background-image: url("../../img/icon-tick.svg");
+    background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     cursor: pointer;
   }
@@ -108,20 +108,23 @@
     line-height: 36px;
 
     &::after {
-      width: 450px;
+      width: 100vw;
       height: 2px;
       top: 20px;
-      left: 245px;
+      left: -69px;
+      overflow: hidden;
+      z-index: -2;
     }
 
     &::before {
       content: "";
       position: absolute;
-      background-color: @basic-theme;
-      width: 30px;
-      height: 2px;
-      top: 20px;
-      left: -72px;
+      background-color: @basic-bck;
+      width: 292px;
+      height: 36px;
+      top: 0;
+      left: -30px;
+      z-index: -1;
     }
   }
 
@@ -185,17 +188,15 @@
 
   .fs-additional__head {
     &::after {
-      width: 1080px;
+      width: 100vw;
       height: 2px;
       top: 20px;
-      right: -835px;
+      left: -113px;
     }
 
     &::before {
-      width: 70px;
-      height: 2px;
-      top: 20px;
-      left: -112px;
+      top: 0;
+      left: -40px;
     }
   }
 }
