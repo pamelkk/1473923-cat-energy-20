@@ -15,6 +15,17 @@
   padding-top: 28px;
   padding-bottom: 35px;
   font-weight: 400;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @basic-theme;
+    width: 53px;
+    height: 2px;
+    top: 42px;
+    right: 0;
+  }
 }
 
 .add-catalog__list {
@@ -42,6 +53,15 @@
   cursor: pointer;
   width: 280px;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: @button-hover;
+  }
+
+  &:active {
+    background-color: @button-hover;
+    color: @button-active-green;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -59,6 +79,26 @@
     margin-left: 37px;
     font-size: 36px;
     line-height: 36px;
+
+
+    &::after {
+      width: 100vw;
+      height: 2px;
+      top: 50px;
+      left: -67px;
+      z-index: -2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: @basic-bck;
+      width: 411px;
+      height: 36px;
+      top: 20px;
+      left: -40px;
+      z-index: -1;
+    }
   }
 
   .add-catalog__button {
@@ -70,7 +110,7 @@
 
 @media (min-width: @desktop-width) {
   .add-catalog {
-    width: 1440px;
+    width: 1220px;
     display: flex;
     flex-wrap: wrap;
     box-sizing: content-box;
@@ -80,8 +120,22 @@
   .add-catalog__title {
     padding-bottom: 81px;
     text-align: left;
-    min-width: 1400px;
+    min-width: 1200px;
     margin-left: 0;
+
+    &::after {
+      width: 100vw;
+      height: 2px;
+      top: 50px;
+      left: -110px;
+      overflow: hidden;
+    }
+
+    &::before {
+      width: 413px;
+      top: 18px;
+      left: -40px;
+    }
   }
 
   .add-catalog__button {

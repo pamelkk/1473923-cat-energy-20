@@ -28,6 +28,18 @@
   color: @basic-dark-text;
   font-family: @font-header;
   box-sizing: border-box;
+
+  &:hover {
+    border-color: @border-toggle;
+  }
+
+  &:active {
+    border: 2px solid @basic-dark-text;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
 }
 
 .fs-name__title {
@@ -73,6 +85,13 @@
     padding-bottom: 11px;
     padding-left: 18px;
     padding-right: 18px;
+
+    &:active {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 17px;
+      padding-right: 17px;
+    }
   }
 
   .fs-name__title {
@@ -96,5 +115,12 @@
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
+
+    &:active {
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 19px;
+      padding-right: 19px;
+    }
   }
 }

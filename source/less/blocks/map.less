@@ -7,10 +7,18 @@
   flex-wrap: wrap;
   flex-direction: column;
   background-color: @features-footer;
-  grid-template-columns: repeat(1, 320px);
-  column-gap: 20px;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  position: relative;
+}
+
+.map__iframe {
+  width: 320px;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-size: 320px 362px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+    background-size: 320px 362px;
+  }
 }
 
 .map__text {
@@ -37,10 +45,25 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: @features-footer;
+  position: relative;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 240px;
+    left: 134px;
+    width: 124px;
+    height: 106px;
+    background-image: url("../img/map-pin.png");
+    background-size: 57px 53px;
+    background-repeat: no-repeat;
+  }
 }
 
-.map__photo {
-  background-color: @features-footer;
+.map__index {
+  background-color: @basic-bck;
 }
 
 @media (min-width: @tablet-width) {
@@ -48,6 +71,11 @@
     width: 768px;
     background-color: transparent;
     align-self: center;
+    display: flex;
+  }
+
+  .map__picture {
+    height: 400px;
   }
 
   .map__address {
@@ -57,11 +85,13 @@
     padding-left: 71px;
     padding-right: 72px;
     padding-bottom: 58px;
-    background-color: @features-footer;
-  }
 
-  .map__photo {
-    width: 768px;
+    &::before {
+      top: 340px;
+      left: 333px;
+      background-size: 113px 106px;
+      background-repeat: no-repeat;
+    }
   }
 
   .map__text {
@@ -75,12 +105,27 @@
     font-size: 20px;
     line-height: 21px;
   }
+
+  .map__iframe {
+    width: 768px;
+    height: 400px;
+    overflow: hidden;
+    background-image: url("../img/bg-map-tablet@1x.png");
+    background-size: 768px 400px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+      background-size: 768px auto;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .map {
     width: 1440px;
     position: relative;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 
   .map__address {
@@ -90,13 +135,30 @@
     padding: 60px;
     width: 570px;
     background-color: @basic-bck;
+    z-index: 3;
+
+    &::before {
+      top: 0;
+      left: 780px;
+      background-size: 113px 106px;
+      background-repeat: no-repeat;
+    }
   }
 
   .map__text {
     text-align: left;
   }
 
-  .map__photo {
-    width: 1220px;
+  .map__iframe {
+    width: 100vw;
+    height: 400px;
+    overflow: hidden;
+    background-image: url("../img/bg-map-desktop@1x.png");
+    background-size: 1440px 400px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+      background-size: 1440px auto;
+    }
   }
 }

@@ -19,6 +19,17 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @basic-theme;
+    width: 120px;
+    height: 2px;
+    top: 15px;
+    left: 160px;
+  }
 }
 
 .fs-additional__item {
@@ -37,6 +48,21 @@
   text-transform: uppercase;
   margin-left: 46px;
   position: relative;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+
+    &::before {
+      border-color: @radio-active;
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: @border-checkbox;
+    }
+  }
 
   &::before {
     content: "";
@@ -58,7 +84,7 @@
     height: 14px;
     left: -37px;
     top: 5px;
-    background-image: url("../../img/icon-tick.svg");
+    background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     cursor: pointer;
   }
@@ -80,6 +106,26 @@
     min-width: 211px;
     font-size: 36px;
     line-height: 36px;
+
+    &::after {
+      width: 100vw;
+      height: 2px;
+      top: 20px;
+      left: -69px;
+      overflow: hidden;
+      z-index: -2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: @basic-bck;
+      width: 292px;
+      height: 36px;
+      top: 0;
+      left: -30px;
+      z-index: -1;
+    }
   }
 
   .fs-additional__list {
@@ -137,6 +183,20 @@
 
     &:nth-of-type(n+2) {
       margin-left: 104px;
+    }
+  }
+
+  .fs-additional__head {
+    &::after {
+      width: 100vw;
+      height: 2px;
+      top: 20px;
+      left: -113px;
+    }
+
+    &::before {
+      top: 0;
+      left: -40px;
     }
   }
 }

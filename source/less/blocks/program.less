@@ -10,6 +10,45 @@
   padding: 20px;
   min-height: 266px;
   box-sizing: border-box;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @basic-theme;
+    top: 24px;
+    left: 22px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &:nth-of-type(1) {
+    &::after {
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+      width: 36px;
+      height: 50px;
+      top: 21px;
+      left: 29px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    &::after {
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+      width: 67px;
+      height: 28px;
+      top: 35px;
+      left: 13px;
+    }
+  }
 }
 
 .program__title {
@@ -17,8 +56,9 @@
   line-height: 37px;
   text-transform: uppercase;
   margin: 0;
-  align-self: center;
   margin-top: 12px;
+  margin-left: 91px;
+  text-align: left;
 }
 
 .program__description {
@@ -52,6 +92,22 @@
   margin-top: auto;
   color: @basic-text;
   text-decoration: none;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 10px;
+    top: 3px;
+    right: -45px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -60,6 +116,31 @@
     margin-top: 0;
     min-height: 372px;
     padding: 57px;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      left: 446px;
+    }
+
+    &:nth-of-type(1) {
+      &::after {
+        width: 140px;
+        height: 192px;
+        top: 81px;
+        left: 476px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      &::after {
+        width: 268px;
+        height: 112px;
+        top: 135px;
+        left: 412px;
+      }
+    }
   }
 
   .program__title {
@@ -67,6 +148,7 @@
     align-self: flex-start;
     font-size: 36px;
     line-height: 36px;
+    margin-left: 0;
   }
 
   .program__description {
@@ -83,6 +165,11 @@
   .program__link {
     font-size: 20px;
     line-height: 30px;
+
+    &::before {
+      top: 10px;
+      right: -55px;
+    }
   }
 }
 
@@ -92,6 +179,31 @@
     margin: 0;
     min-height: 374px;
     padding: 55px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+
+    &:nth-of-type(1) {
+      &::after {
+        width: 70px;
+        height: 97px;
+        top: 41px;
+        left: 67px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      &::after {
+        width: 134px;
+        height: 56px;
+        top: 67px;
+        left: 32px;
+      }
+    }
   }
 
   .program__title {

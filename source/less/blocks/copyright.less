@@ -3,6 +3,7 @@
   margin-bottom: 22px;
   display: flex;
   justify-content: space-between;
+  padding-top: 12px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -14,10 +15,25 @@
   line-height: 18px;
   color: @basic-dark-text;
   align-self: center;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.copyright__logo {
+.copyright__img {
   align-self: center;
+  fill: @social;
+
+  &:hover {
+    fill: @basic-theme;
+  }
+
+  &:active {
+    fill: @basic-theme;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
