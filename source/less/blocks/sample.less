@@ -356,12 +356,14 @@
 
 @media (min-width: @desktop-width) {
   .sample {
-    width: 1220px;
+    width: auto;
     min-height: 598px;
     align-self: center;
     padding: 0;
     position: relative;
     flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 
   .sample__text {
@@ -369,10 +371,11 @@
 
     &::before {
       top: -70px;
-      left: -110px;
+      left: -190px;
       width: 100vw;
       height: 462px;
       background-color: @features-footer;
+      overflow: hidden;
     }
   }
 

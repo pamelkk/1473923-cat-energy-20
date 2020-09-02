@@ -158,13 +158,16 @@
     width: 1220px;
     min-height: 581px;
     margin-bottom: 0;
+    grid-column-start: 1;
+    grid-column-end: -1;
 
     &::before {
       display: block;
-      width: 100vw;
+      width: calc(100vw - 59%);
       height: 696px;
       position: absolute;
       background-color: #63a848;
+      background-size: auto 100%;
       top: -115px;
       left: 610px;
       background-image: url("../img/index-background-desktop@1x.jpg");
