@@ -4,29 +4,33 @@
   flex-wrap: wrap;
   margin: 0;
   flex-direction: column;
-  width: 280px;
+  width: 320px;
   border: none;
   padding: 0;
   margin-bottom: 0;
+  padding-left: 20px;
+  box-sizing: border-box;
 }
 
 .fs-contacts__head {
+  padding: 0;
+  width: 187px;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: @basic-text;
   padding-top: 26px;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
     background-color: @basic-theme;
-    width: 75px;
+    width: 99px;
     height: 2px;
     top: 42px;
-    right: 0;
+    right: -113px;
   }
 }
 
@@ -35,9 +39,8 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  flex-grow: 1;
   align-self: center;
-  min-width: 50px;
+  min-width: 40px;
   color: @basic-dark-text;
   position: relative;
 
@@ -68,7 +71,7 @@
     height: 20px;
     background-image: url("../img/icon-phone.svg");
     background-size: 20px 20px;
-    top: -2px;
+    top: 0;
   }
 }
 
@@ -85,9 +88,9 @@
   color: @basic-dark-text;
   flex-grow: 0.5;
   align-self: center;
-  min-width: 204px;
   font-family: @font-header;
   box-sizing: border-box;
+  height: 45px;
 
   &:hover {
     border-color: @border-toggle;
@@ -104,7 +107,7 @@
 
 .fs-contacts__row {
   height: 45px;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   display: flex;
   width: 281px;
   box-sizing: border-box;
@@ -114,21 +117,39 @@
   margin-bottom: 0;
 }
 
+.fs-contacts__field-mail {
+  margin-left: 11px;
+  width: 219px;
+}
+
+.fs-contacts__field-tel {
+  margin-left: 15px;
+  width: 204px;
+}
+
+.fs-contacts__field:active + .fs-contacts__title::before {
+  fill: @basic-theme;
+}
+
+
 @media (min-width: @tablet-width) {
   .fs-contacts {
     width: 630px;
-    margin-top: 71px;
+    margin-top: 75px;
+    padding-left: 0;
   }
 
   .fs-contacts__head {
     padding-top: 0;
     font-size: 36px;
     line-height: 36px;
+    width: auto;
+    margin-bottom: 76px;
 
     &::after {
       width: 100vw;
       height: 2px;
-      top: 20px;
+      top: 22px;
       left: -69px;
       overflow: hidden;
       z-index: -2;
@@ -141,7 +162,7 @@
       width: 593px;
       height: 36px;
       top: 0;
-      left: -30px;
+      left: -38px;
       z-index: -1;
     }
   }
@@ -152,13 +173,14 @@
     min-width: 535px;
     padding-top: 11px;
     padding-bottom: 11px;
-    padding-left: 18px;
+    padding-left: 19px;
     padding-right: 50px;
+    height: 52px;
 
     &:active {
       padding-top: 10px;
       padding-bottom: 10px;
-      padding-left: 17px;
+      padding-left: 18px;
       padding-right: 49px;
     }
   }
@@ -172,7 +194,7 @@
   .fs-contacts__row {
     height: 52px;
     margin-bottom: 20px;
-    width: 630px;
+    width: auto;
   }
 
   .fs-contacts__row:last-of-type {
@@ -182,7 +204,7 @@
   .fs-contacts__mail {
     &::before {
       top: 9px;
-      left: 595px;
+      left: 597px;
     }
   }
 
@@ -192,11 +214,21 @@
       left: 595px;
     }
   }
+
+  .fs-contacts__field-mail {
+    margin-left: 20px;
+    width: 551px;
+  }
+
+  .fs-contacts__field-tel {
+    margin-left: 15px;
+    width: 535px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .fs-contacts {
-    margin-top: 65px;
+    margin-top: 69px;
     flex-direction: row;
     width: 1220px;
     box-sizing: border-box;
@@ -221,13 +253,13 @@
   }
 
   .fs-contacts__head {
-    margin-bottom: 76px;
+    margin-bottom: 75px;
     flex-grow: 2;
 
     &::after {
       width: 100vw;
       height: 2px;
-      top: 20px;
+      top: 22px;
       left: -110px;
     }
 
@@ -241,6 +273,15 @@
   .fs-contacts__field {
     box-sizing: border-box;
     min-width: 472px;
+    margin-left: 5px;
+  }
+
+  .fs-contacts__field-tel {
+    margin-left: 37px;
+  }
+
+  .fs-contacts__field-mail {
+    margin-left: 21px;
   }
 
   .fs-contacts__title {
@@ -249,15 +290,15 @@
 
   .fs-contacts__mail {
     &::before {
-      top: 9px;
-      left: 530px;
+      top: 8px;
+      left: 532px;
     }
   }
 
   .fs-contacts__tel {
     &::before {
-      top: 5px;
-      left: 530px;
+      top: 4px;
+      left: 535px;
     }
   }
 }

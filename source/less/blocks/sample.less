@@ -44,16 +44,19 @@
   color: @basic-dark-text;
   margin: 0;
   margin-left: 20px;
+  width: 279px;
+  margin-bottom: 17px;
 }
 
 .sample__photo {
   align-self: center;
+  margin-left: 3px;
 }
 
 .sample__target {
   display: block;
   width: 77px;
-  padding-top: 9px;
+  padding-top: 6px;
   padding-left: 22px;
   position: relative;
   z-index: 1;
@@ -77,8 +80,8 @@
   color: @basic-text;
   border: 1px solid @border-toggle;
   border-radius: 3px;
-  padding-top: 15px;
-  padding-bottom: 18px;
+  padding-top: 10px;
+  padding-bottom: 8px;
   padding-left: 40px;
   padding-right: 40px;
   font-family: @font-header;
@@ -108,9 +111,9 @@
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  margin-top: 25px;
-  margin-bottom: 42px;
-  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 33px;
+  margin-left: 0;
 }
 
 .sample__range-controls {
@@ -120,7 +123,7 @@
   height: 14px;
   box-sizing: border-box;
   border-radius: 6px;
-  margin-top: 35px;
+  margin-top: 31px;
   margin-left: 119px;
   position: relative;
 
@@ -128,7 +131,7 @@
     content: "было";
     position: absolute;
     top: -4px;
-    left: -54px;
+    left: -56px;
     color: @basic-text;
     font-size: 16px;
     line-height: 20px;
@@ -148,7 +151,7 @@
     content: "стало";
     position: absolute;
     top: -4px;
-    left: 97px;
+    left: 100px;
     color: @basic-text;
     font-size: 16px;
     line-height: 20px;
@@ -196,12 +199,24 @@
   .sample {
     width: 708px;
     padding: 0;
-    padding-top: 43px;
+    padding-top: 0;
     box-sizing: border-box;
     background-color: transparent;
     flex-direction: row;
     flex-wrap: wrap;
     align-self: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 575px;
+      left: -30px;
+      width: 768px;
+      height: 466px;
+      background-color: @sample-bck-mob;
+      z-index: -1;
+    }
   }
 
   .sample__info {
@@ -221,15 +236,18 @@
   .sample__expenses {
     width: 174px;
     margin: 0;
-    margin-top: 54px;
-    margin-left: 145px;
+    margin-top: 63px;
+    margin-left: 146px;
     font-size: 20px;
     line-height: 20px;
     text-align: right;
   }
 
   .sample__target {
-    padding-left: 40px;
+    width: 130px;
+    padding-left: 16px;
+    padding-top: 9px;
+    padding-right: 6px;
 
     &::before {
       top: 0;
@@ -244,25 +262,14 @@
     margin: 0;
     font-size: 16px;
     line-height: 24px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 460px;
-      left: -30px;
-      width: 768px;
-      height: 430px;
-      background-color: @sample-bck-mob;
-      z-index: -1;
-    }
+    width: auto;
   }
 
   .sample__photo {
-    margin-top: 59px;
-    width: 708px;
-    height: 550px;
-    padding-bottom: 33px;
+    margin-top: 70px;
+    width: 700px;
+    height: 517px;
+    margin-bottom: 47px;
   }
 
   .sample__info-block {
@@ -270,14 +277,19 @@
     height: 77px;
     box-sizing: border-box;
     margin: 0;
-    margin-top: 54px;
+    margin-top: 67px;
   }
 
   .sample__volume {
     font-size: 30px;
     line-height: 37px;
     color: @basic-text;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 55px;
+    padding-right: 55px;
   }
+
 
   .sample__range-controls {
     background-color: @border-toggle-tablet;
@@ -286,7 +298,7 @@
     height: 6px;
     box-sizing: border-box;
     border-radius: 6px;
-    margin-top: 0;
+    margin-top: -31px;
     margin-bottom: 34px;
     margin-left: 140px;
     position: relative;
@@ -294,7 +306,7 @@
     &::before {
       content: "было";
       top: -13px;
-      left: -64px;
+      left: -74px;
       font-size: 20px;
       line-height: 30px;
       border-bottom: 1px dotted @border-toggle-tablet;
@@ -352,26 +364,29 @@
       border-color: @basic-theme;
     }
   }
+
+  .sample__price {
+    display: block;
+    margin-top: 8px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .sample {
-    width: auto;
+    width: 1220px;
     min-height: 598px;
+    max-height: 598px;
+    box-sizing: border-box;
     align-self: center;
     padding: 0;
     position: relative;
     flex-direction: column;
     grid-column-start: 1;
     grid-column-end: -1;
-  }
-
-  .sample__text {
-    width: 436px;
 
     &::before {
-      top: -70px;
-      left: -190px;
+      top: 137px;
+      left: -58px;
       width: 100vw;
       height: 462px;
       background-color: @features-footer;
@@ -379,21 +394,33 @@
     }
   }
 
+  .sample__text {
+    width: 436px;
+  }
+
   .sample__expenses {
-    width: 327px;
+    display: flex;
+    width: 330px;
     text-align: left;
     margin: 0;
-    margin-top: 55px;
+    margin-top: 40px;
   }
 
   .sample__price {
-    padding-left: 58px;
+    margin-top: 0;
+    padding-left: 65px;
+  }
+
+  .sample__info:nth-of-type(2) .sample__volume {
+    width: 162px;
+    padding-left: 27px;
+    padding-right: 27px;
   }
 
   .sample__photo {
     position: absolute;
-    top: -90px;
-    left: 500px;
+    top: -66px;
+    left: 570px;
     width: 690px;
     height: 536px;
     padding-bottom: 0;
@@ -401,31 +428,37 @@
   }
 
   .sample__title {
-    margin-bottom: 146px;
+    margin-bottom: 150px;
+  }
+
+  .sample__volume {
+    padding-left: 55px;
+    padding-right: 55px;
   }
 
   .sample__info-block {
     height: 72px;
     box-sizing: border-box;
-    margin-top: 69px;
+    margin-top: 85px;
   }
 
   .sample__target {
     padding-left: 10px;
     width: auto;
     max-width: 140px;
+    padding-top: 9px;
 
     &::before {
       top: 0;
-      left: 20px;
-      width: 125px;
-      height: 80px;
+      left: 15px;
+      width: 135px;
+      height: 30px;
       background-color: @features-footer;
     }
   }
 
   .sample__range-controls {
-    margin-left: 600px;
-    margin-bottom: 45px;
+    margin-left: 722px;
+    margin-top: -12px;
   }
 }

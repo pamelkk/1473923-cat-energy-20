@@ -6,9 +6,9 @@
   margin-bottom: 32px;
   grid-column-start: 1;
   grid-column-end: -1;
-  align-self: center;
   display: flex;
   flex-direction: column;
+  align-content: center;
 }
 
 .selection__title {
@@ -21,29 +21,32 @@
 }
 
 .selection__hint {
+  width: 226px;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
   padding-left: 20px;
 }
 
 .selection__form {
-  width: 280px;
+  align-self: center;
+  width: 320px;
+  box-sizing: border-box;
   border: none;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
 }
 
 
 .selection__send {
-  margin-top: 34px;
-  margin-bottom: 21px;
+  margin-top: 38px;
+  margin-bottom: 15px;
   width: 280px;
   border: none;
+  height: 40px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -70,7 +73,7 @@
 }
 
 .selection__required {
-  padding-left: 62px;
+  padding-left: 60px;
   padding-right: 61px;
   font-family: @font-text;
   font-size: 14px;
@@ -79,7 +82,7 @@
 
 @media (min-width: @tablet-width) {
   .selection {
-    margin-bottom: 72px;
+    margin-bottom: 73px;
     grid-column-start: 1;
     grid-column-end: -1;
     width: 709px;
@@ -94,7 +97,7 @@
   }
 
   .selection__form {
-    padding-left: 40px;
+    padding-left: 0;
     width: 630px;
   }
 
@@ -108,20 +111,24 @@
   }
 
   .selection__send {
-    margin-top: 54px;
     margin-bottom: 0;
     width: 282px;
-    flex-grow: 1;
     font-size: 20px;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 45px;
     padding-right: 45px;
+    height: 52px;
+  }
+
+  .selection__wrapper {
+    margin-top: 20px;
   }
 
   .selection__required {
     width: 180px;
-    padding-left: 61px;
+    padding-top: 8px;
+    padding-left: 58px;
     padding-right: 0;
     font-size: 16px;
     line-height: 16px;
@@ -132,18 +139,20 @@
 @media (min-width: @desktop-width) {
   .selection {
     width: 1220px;
+    align-self: center;
+    margin-bottom: 82px;
   }
 
   .selection__title {
-    margin-top: 77px;
-    margin-bottom: 53px;
+    margin-top: 73px;
+    margin-bottom: 56px;
     font-size: 60px;
     line-height: 60px;
   }
 
   .selection__hint {
     margin: 0;
-    margin-bottom: 69px;
+    margin-bottom: 65px;
     padding-left: 0;
   }
 
@@ -155,12 +164,22 @@
   }
 
   .selection__send {
-    margin-top: 61px;
+    margin-top: 67px;
     padding-top: 13px;
     padding-bottom: 13px;
     padding-left: 188px;
     padding-right: 188px;
     width: 568px;
+    height: 52px;
     box-sizing: border-box;
+  }
+
+  .selection__required {
+    padding-top: 5px;
+    padding-left: 76px;
+  }
+
+  .selection__wrapper {
+    margin: 0;
   }
 }

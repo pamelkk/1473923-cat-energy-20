@@ -46,15 +46,15 @@
           <legend class="visually-hidden">Данные о вашем питомце</legend>
           <div class="fs-name__row">
             <label class="fs-name__title" for="name">Имя:*</label>
-            <input class="fs-name__field" id="name" type="text" name="name" placeholder="Барсик" required />
+            <input class="fs-name__field fs-name__field-name" id="name" type="text" name="name" placeholder="Барсик" required />
           </div>
           <div class="fs-name__row">
             <label class="fs-name__title" for="weight">Вес (кг):*</label>
-            <input class="fs-name__field" id="weight" type="number" name="weight" placeholder="7" required />
+            <input class="fs-name__field fs-name__field-weight" id="weight" type="number" name="weight" placeholder="7" required />
           </div>
           <div class="fs-name__row">
-            <label class="fs-name__title" for="age">Возраст (лет):</label>
-            <input class="fs-name__field" id="age" type="number" name="age" placeholder="7" />
+            <label class="fs-name__title fs-name__title-age" for="age">Возраст (лет):</label>
+            <input class="fs-name__field fs-name__field-age" id="age" type="number" name="age" placeholder="7" />
           </div>
         </fieldset>
         <fieldset class="selection__fs--program fs-program">
@@ -83,12 +83,12 @@
           <div class="fs-contacts__rows">
             <div class="fs-contacts__row">
               <label class="fs-contacts__title fs-contacts__mail" for="email">E-mail:*</label>
-              <input class="fs-contacts__field" type="email" id="email" name="email" placeholder="kuklachev@gmail.com"
+              <input class="fs-contacts__field fs-contacts__field-mail" type="email" id="email" name="email" placeholder="kuklachev@gmail.com"
                 required />
             </div>
             <div class="fs-contacts__row">
               <label class="fs-contacts__title fs-contacts__tel" for="tel">Телефон:*</label>
-              <input class="fs-contacts__field" type="tel" id="tel" name="tel" placeholder="8(960)900-60-90" required />
+              <input class="fs-contacts__field fs-contacts__field-tel" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required />
             </div>
           </div>
         </fieldset>
@@ -124,16 +124,16 @@
           </ul>
           <div class="selection__wrapper">
             <button class="selection__send">Отправить заявку</button>
-            <small class="selection__required">* - Обязательные поля</small></div>
+            <small class="selection__required">* — Обязательные поля</small></div>
         </fieldset>
       </form>
     </section>
-    <section class="map">
+    <section class="map map-catalog">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <div class="map__address">
-        <span class="map__invite">Приглашаем к сотрудничеству дилеров!</span>
+        <span class="map__invite">Приглашаем <br>к сотрудничеству дилеров!</span>
         <address class="map__text">
-          ул.Большая Конюшенная, д.19/8 Санкт-Петербург
+          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </address>
       </div>
       <iframe class="map__iframe"
@@ -146,17 +146,9 @@
           tabindex="0"
           title="Офис компании по адресу: ул. Большая Конюшенная 19/8, Санкт-Петербург"
         ></iframe>
-      <picture class="map__picture">
-        <source media="(min-width: 1200px)" srcset="
-              img/bg-map-desktop@1x.png 1x,
-              img/bg-map-desktop@2x.png 2x
-            " />
-        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x" />
-        <img class="map__photo" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320"
-          height="362" alt="Карта, где мы находимся" /></picture>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer footer-form">
     <div class="footer__logo">
       <img src="img/logo-footer.svg" width="128" height="23" alt="Изображение нашего логотипа" />
     </div>

@@ -12,6 +12,7 @@
 
 .map__iframe {
   width: 320px;
+  height: 362px;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-size: 320px 362px;
 
@@ -33,7 +34,7 @@
 
 .map__invite {
   font-size: 16px;
-  line-height: 18px;
+  line-height: 21px;
   text-transform: uppercase;
   color: @form-etc;
   width: 140px;
@@ -42,6 +43,8 @@
 
 .map__address {
   padding: 20px;
+  padding-top: 25px;
+  padding-bottom: 24px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -72,6 +75,11 @@
     background-color: transparent;
     align-self: center;
     display: flex;
+    margin-top: 50px;
+  }
+
+  .map-catalog {
+    margin-top: 0;
   }
 
   .map__picture {
@@ -85,6 +93,8 @@
     padding-left: 71px;
     padding-right: 72px;
     padding-bottom: 58px;
+    height: 201px;
+    line-height: 45px;
 
     &::before {
       top: 340px;
@@ -104,6 +114,8 @@
   .map__invite {
     font-size: 20px;
     line-height: 21px;
+    width: 171px;
+    height: 83px;
   }
 
   .map__iframe {
@@ -126,13 +138,15 @@
     position: relative;
     grid-column-start: 1;
     grid-column-end: -1;
+    margin-top: 0;
   }
 
   .map__address {
     position: absolute;
     top: 95px;
     left: 110px;
-    padding: 60px;
+    padding: 70px;
+    padding-left: 75px;
     width: 570px;
     background-color: @basic-bck;
     z-index: 3;
@@ -143,6 +157,10 @@
       background-size: 113px 106px;
       background-repeat: no-repeat;
     }
+  }
+
+  .map__invite {
+    width: 163px;
   }
 
   .map__text {

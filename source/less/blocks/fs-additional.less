@@ -1,10 +1,12 @@
 .fs-additional {
   font-family: @font-header;
-  width: 280px;
+  width: 320px;
   color: @basic-text;
   border: none;
   padding: 0;
-  margin-top: 27px;
+  margin-top: 23px;
+  padding-left: 20px;
+  box-sizing: border-box;
 }
 
 .fs-additional__list {
@@ -14,8 +16,9 @@
 }
 
 .fs-additional__head {
+  padding: 0;
   margin-top: 0;
-  margin-bottom: 34px;
+  margin-bottom: 36px;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
@@ -25,28 +28,32 @@
     content: "";
     position: absolute;
     background-color: @basic-theme;
-    width: 120px;
+    width: 136px;
     height: 2px;
     top: 15px;
-    left: 160px;
+    left: 162px;
   }
 }
 
 .fs-additional__item {
-  margin-top: 12px;
+  margin-top: 20px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:nth-of-type(3) {
+    margin-top: 17px;
+  }
 }
 
-
-.fs-additional__item:first-of-type {
-  margin-top: 0;
-}
 
 .fs-additional__title {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  margin-left: 46px;
+  margin-left: 45px;
   position: relative;
   cursor: pointer;
 
@@ -67,10 +74,10 @@
   &::before {
     content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
-    left: -45px;
-    top: -5px;
+    width: 28px;
+    height: 28px;
+    left: -47px;
+    top: -2px;
     border: 1px solid @border-toggle;
     cursor: pointer;
   }
@@ -82,8 +89,8 @@
     position: absolute;
     width: 18px;
     height: 14px;
-    left: -37px;
-    top: 5px;
+    left: -41px;
+    top: 7px;
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     cursor: pointer;
@@ -93,15 +100,16 @@
 @media (min-width: @tablet-width) {
   .fs-additional {
     width: 630px;
-    margin-top: 65px;
+    margin-top: 60px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-left: 0;
   }
 
   .fs-additional__head {
-    margin-bottom: 57px;
+    margin-bottom: 61px;
     flex-grow: 1;
     min-width: 211px;
     font-size: 36px;
@@ -110,7 +118,7 @@
     &::after {
       width: 100vw;
       height: 2px;
-      top: 20px;
+      top: 22px;
       left: -69px;
       overflow: hidden;
       z-index: -2;
@@ -123,7 +131,7 @@
       width: 292px;
       height: 36px;
       top: 0;
-      left: -30px;
+      left: -40px;
       z-index: -1;
     }
   }
@@ -145,7 +153,7 @@
     width: 221px;
 
     &:nth-of-type(n+3) {
-      margin-top: 32px;
+      margin-top: 44px;
     }
 
     &:nth-of-type(2n) {
@@ -156,12 +164,29 @@
   .fs-additional__title {
     font-size: 20px;
     line-height: 30px;
+    margin-left: 58px;
+
+    &::before {
+      width: 38px;
+      height: 38px;
+      left: -58px;
+      top: -4px;
+    }
+  }
+
+  .fs-additional__field {
+    &:checked + .fs-additional__title::after {
+      width: 18px;
+      height: 14px;
+      left: -47px;
+      top: 9px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .fs-additional {
-    margin-top: 67px;
+    margin-top: 62px;
     width: 1220px;
   }
 
@@ -190,7 +215,7 @@
     &::after {
       width: 100vw;
       height: 2px;
-      top: 20px;
+      top: 22px;
       left: -113px;
     }
 
@@ -198,5 +223,9 @@
       top: 0;
       left: -40px;
     }
+  }
+
+  .fs-additional__title {
+    margin-left: 56px;
   }
 }
