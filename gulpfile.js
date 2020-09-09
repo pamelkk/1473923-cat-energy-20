@@ -21,8 +21,6 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -87,8 +85,8 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/less/**/*.less", styles);
+  gulp.watch("source/*.html", html);
 };
 
 exports.default = gulp.series(
@@ -121,6 +119,8 @@ const build = () => gulp.series(
 const start = () => gulp.series(
   clean,
   copy,
-  styles
+  styles,
+  server,
+  watcher
 );
 exports.start = gulp.series(clean, copy, styles);

@@ -48,9 +48,16 @@
   margin-bottom: 17px;
 }
 
-.sample__photo {
+.sample__photo-before {
   align-self: center;
   margin-left: 3px;
+  display: none;
+}
+
+.sample__photo-after {
+  align-self: center;
+  margin-left: 3px;
+  display: none;
 }
 
 .sample__target {
@@ -123,48 +130,58 @@
   height: 14px;
   box-sizing: border-box;
   border-radius: 6px;
-  margin-top: 31px;
+  margin-top: 35px;
   margin-left: 119px;
   position: relative;
+}
 
-  &::before {
-    content: "было";
-    position: absolute;
-    top: -4px;
-    left: -56px;
-    color: @basic-text;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    cursor: pointer;
+.sample__button-before {
+  position: absolute;
+  top: -5px;
+  left: -62px;
+  color: @basic-text;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  width: 49px;
+  cursor: pointer;
+  border: none;
+  font-family: @font-header;
+  background-color: transparent;
+  padding-bottom: 2px;
+  border-bottom: 1px dotted @border-toggle-tablet;
 
-    &:hover {
-      border-bottom: 1px solid @border-toggle-tablet;
-    }
-
-    &:active {
-      border: none;
-    }
+  &:hover {
+    border-bottom: 1px solid @border-toggle-tablet;
   }
 
-  &::after {
-    content: "стало";
-    position: absolute;
-    top: -4px;
-    left: 100px;
-    color: @basic-text;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    cursor: pointer;
+  &:active {
+    border: none;
+  }
+}
 
-    &:hover {
-      border-bottom: 1px solid @border-toggle-tablet;
-    }
+.sample__button-after {
+  position: absolute;
+  width: 51px;
+  top: -5px;
+  left: 94px;
+  color: @basic-text;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  font-family: @font-header;
+  background-color: transparent;
+  padding-bottom: 2px;
+  border-bottom: 1px dotted @border-toggle-tablet;
 
-    &:active {
-      border: none;
-    }
+  &:hover {
+    border-bottom: 1px solid @border-toggle-tablet;
+  }
+
+  &:active {
+    border: none;
   }
 }
 
@@ -194,6 +211,9 @@
   left: 33px;
 }
 
+.photo-active {
+  display: block;
+}
 
 @media (min-width: @tablet-width) {
   .sample {
@@ -265,11 +285,19 @@
     width: auto;
   }
 
-  .sample__photo {
+  .sample__photo-before {
     margin-top: 70px;
     width: 700px;
     height: 517px;
     margin-bottom: 47px;
+  }
+
+  .sample__photo-after {
+    margin-top: 84px;
+    margin-left: 20px;
+    width: 700px;
+    height: 510px;
+    margin-bottom: 40px;
   }
 
   .sample__info-block {
@@ -298,28 +326,24 @@
     height: 6px;
     box-sizing: border-box;
     border-radius: 6px;
-    margin-top: -31px;
+    margin-top: -24px;
     margin-bottom: 34px;
-    margin-left: 140px;
+    margin-left: 120px;
     position: relative;
+  }
 
-    &::before {
-      content: "было";
-      top: -13px;
-      left: -74px;
-      font-size: 20px;
-      line-height: 30px;
-      border-bottom: 1px dotted @border-toggle-tablet;
-    }
+  .sample__button-before {
+    top: -14px;
+    left: -79px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 
-    &::after {
-      content: "стало";
-      top: -13px;
-      left: 445px;
-      font-size: 20px;
-      line-height: 30px;
-      border-bottom: 1px dotted @border-toggle-tablet;
-    }
+  .sample__button-after {
+    top: -14px;
+    left: 441px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .sample__bar {
@@ -331,7 +355,7 @@
       content: "";
       position: absolute;
       top: -5px;
-      left: 206px;
+      left: 205px;
       width: 8px;
       height: 8px;
       border-radius: 50%;
@@ -351,7 +375,7 @@
     box-sizing: border-box;
     position: absolute;
     top: -15px;
-    left: 197px;
+    left: 196px;
     cursor: pointer;
     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
 
@@ -417,7 +441,17 @@
     padding-right: 27px;
   }
 
-  .sample__photo {
+  .sample__photo-before {
+    position: absolute;
+    top: -66px;
+    left: 570px;
+    width: 690px;
+    height: 536px;
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+
+  .sample__photo-after {
     position: absolute;
     top: -66px;
     left: 570px;
