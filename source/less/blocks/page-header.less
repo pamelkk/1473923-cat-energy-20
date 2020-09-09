@@ -46,6 +46,26 @@
   cursor: pointer;
 }
 
+.page-header__close-menu {
+  background-image: url("../../img/icon-close.svg");
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  width: 24px;
+  height: 25px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.menu-active {
+  display: block;
+}
+
+.menu-inactive {
+  display: none;
+}
+
 
 @media (min-width: @tablet-width) {
   .page-header {
@@ -58,7 +78,10 @@
     padding-top: 24px;
   }
 
-  .page-header__open-menu {
+  .page-header__open-menu,
+  .page-header__close-menu,
+  .menu-active,
+  .menu-inactive {
     display: none;
   }
 
