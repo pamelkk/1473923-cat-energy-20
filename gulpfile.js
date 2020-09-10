@@ -10,6 +10,8 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
+const del = require("del");
+
 
 // Styles
 
@@ -21,6 +23,8 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(csso())
+    .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -28,7 +32,13 @@ const styles = () => {
 
 exports.styles = styles;
 
-const del = require("del");
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest("build/html"))
+    .pipe(sync.stream());
+};
+
+exports.html = html;
 
 const clean = () => {
   return del("build");
@@ -38,11 +48,11 @@ exports.clean = clean;
 // Images
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
-     .pipe(imagemin([
-       imagemin.optipng({optimizationLevel: 3}),
-       imagemin.mozjpeg({progressive: true}),
-       imagemin.svgo()
-     ]));
+      .pipe(imagemin([
+        imagemin.optipng({optimizationLevel: 3}),
+        imagemin.mozjpeg({progressive: true}),
+        imagemin.svgo()
+      ]));
 };
 
 exports.images = images;
@@ -59,9 +69,9 @@ exports.makewebp = makewebp;
 // Sprite
 const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
-     .pipe(svgstore())
-     .pipe(rename("sprite.svg"))
-     .pipe(gulp.dest("build/img"))
+      .pipe(svgstore())
+      .pipe(rename("sprite.svg"))
+      .pipe(gulp.dest("build/img"))
 };
 
 exports.sprite = sprite;
@@ -111,16 +121,20 @@ const build = () => gulp.series(
   "clean",
   "copy",
   "styles",
+  "html",
   "images",
   "makewebp",
   "sprite"
 );
 
+exports.build = gulp.series(clean, copy, styles, html, images, makewebp, sprite);
+
 const start = () => gulp.series(
   clean,
   copy,
   styles,
+  html,
   server,
   watcher
 );
-exports.start = gulp.series(clean, copy, styles);
+exports.start = gulp.series(clean, copy, styles, html, server, watcher);
