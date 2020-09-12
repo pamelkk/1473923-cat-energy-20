@@ -34,7 +34,7 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(gulp.dest("build/html"))
+    .pipe(gulp.dest("build/."))
     .pipe(sync.stream());
 };
 

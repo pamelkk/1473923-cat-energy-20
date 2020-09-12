@@ -9,13 +9,13 @@ var name = document.querySelector(".fs-name__field");
 var contacts = document.querySelector(".fs-contacts__field");
 var isStorageSupport = true;
 var storage = "";
+var inputElements = document.querySelectorAll(".fs-contacts__field", ".fs-contacts__name");
 
 buttonOpen.addEventListener("click", function (evt) {
   console.log("Открыть меню!");
   if (!menu.classList.contains("main-nav-active")) {
     menu.classList.add("main-nav-active");
     buttonOpen.classList.add("menu-active");
-    buttonClose.classList.remove("menu-active");
   }
 });
 
@@ -33,22 +33,8 @@ buttonAfter.addEventListener("click", function (evt) {
   }
 });
 
-form.addEventListener("submit", function (evt) {
-  if (!inputEmail.value || !inputTel.value) {
-    console.log("Не заполнены данные");
-    evt.preventDefault();
-    contacts.classList.remove("contacts__field-error");
-    contacts.offsetWidth = popup.offsetWidth;
-    contacts.classList.add("contacts__field-error");
-  }
-});
-
-form.addEventListener("submit", function (evt) {
-  if (!inputName.value || !inputWeight.value) {
-    console.log("Не заполнены данные");
-    evt.preventDefault();
-    name.classList.remove("name__field-error");
-    name.offsetWidth = popup.offsetWidth;
-    name.classList.add("name__field-error");
-  }
+[].forEach.call(inputElements, function (item) {
+  item.addEventListener('focus', function(){
+    item.classList.toggle('fs-active', true);
+  });
 });
