@@ -11,6 +11,22 @@ var isStorageSupport = true;
 var storage = "";
 var inputElements = document.querySelector(".fs-name__field");
 
+buttonBefore.addEventListener("click", function (evt) {
+  if (!photoBefore.classList.contains("photo-active")) {
+    photoAfter.classList.remove("photo-active");
+  } else {
+    photoBefore.classList.add("photo-active");
+  }
+});
+
+buttonAfter.addEventListener("click", function (evt) {
+  if (!photoAfter.classList.contains("photo-active")) {
+    photoBefore.classList.remove("photo-active");
+  } else {
+    photoAfter.classList.add("photo-active");
+  }
+});
+
 buttonOpen.addEventListener("click", function (evt) {
   console.log("Открыть меню!");
   if (!menu.classList.contains("main-nav-active")) {
@@ -27,18 +43,3 @@ buttonOpen.addEventListener("click", function (evt) {
   });
 });
 
-buttonBefore.addEventListener("click", function (evt) {
-  if (!photoBefore.classList.contains("photo-active")) {
-    photoAfter.classList.remove("photo-active");
-  } else {
-    photoBefore.classList.add("photo-active");
-  }
-});
-
-buttonAfter.addEventListener("click", function (evt) {
-  if (!photoAfter.classList.contains("photo-active")) {
-    photoBefore.classList.remove("photo-active");
-  } else {
-    photoAfter.classList.add("photo-active");
-  }
-});
