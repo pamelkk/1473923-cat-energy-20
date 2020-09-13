@@ -8,16 +8,18 @@
   grid-column-end: -1;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-self: center;
 }
 
 .selection__title {
   font-weight: 400;
+  margin-top: 0;
   font-size: 36px;
   line-height: 36px;
-  margin-top: 27px;
+  padding-top: 27px;
   margin-bottom: 37px;
   padding-left: 20px;
+  border-top: 1px solid @button-pressed;
 }
 
 .selection__hint {
@@ -73,7 +75,7 @@
 }
 
 .selection__required {
-  padding-left: 60px;
+  padding-left: 82px;
   padding-right: 61px;
   font-family: @font-text;
   font-size: 14px;
@@ -94,6 +96,8 @@
     font-size: 60px;
     line-height: 60px;
     padding-left: 0;
+    border: none;
+    padding-top: 0;
   }
 
   .selection__form {
@@ -119,6 +123,7 @@
     padding-left: 45px;
     padding-right: 45px;
     height: 52px;
+    margin-left: 0;
   }
 
   .selection__wrapper {

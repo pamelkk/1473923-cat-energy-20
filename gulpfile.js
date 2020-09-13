@@ -118,13 +118,13 @@ const copy = () => {
 exports.copy = copy;
 
 const build = () => gulp.series(
-  "clean",
-  "copy",
-  "styles",
-  "html",
-  "images",
-  "makewebp",
-  "sprite"
+  clean,
+  copy,
+  styles,
+  html,
+  images,
+  makewebp,
+  sprite
 );
 
 exports.build = gulp.series(clean, copy, styles, html, images, makewebp, sprite);
@@ -137,4 +137,5 @@ const start = () => gulp.series(
   server,
   watcher
 );
+
 exports.start = gulp.series(clean, copy, styles, html, server, watcher);

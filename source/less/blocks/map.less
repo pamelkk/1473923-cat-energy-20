@@ -8,18 +8,21 @@
   flex-direction: column;
   background-color: @features-footer;
   position: relative;
+  align-self: center;
 }
 
 .map__iframe {
+  height: 362px;
+  position: absolute;
+  top: 113px;
+  width: 100vw;
+  overflow: hidden;
+  left: calc(-50vw + 50%);
+}
+
+.map__pic {
   width: 320px;
   height: 362px;
-  background-image: url("../img/bg-map-mobile@1x.png");
-  background-size: 320px 362px;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/bg-map-mobile@2x.png");
-    background-size: 320px 362px;
-  }
 }
 
 .map__text {
@@ -52,17 +55,19 @@
   background-color: @features-footer;
   position: relative;
   box-sizing: border-box;
+}
 
+.map__address:not(.map__index) {
   &::before {
     content: "";
     position: absolute;
-    top: 240px;
-    left: 134px;
-    width: 124px;
-    height: 106px;
-    background-image: url("../img/map-pin.png");
-    background-size: 57px 53px;
-    background-repeat: no-repeat;
+    background-color: @features-footer;
+    z-index: -1;
+    width: 100vw;
+    height: 113px;
+    top: 0;
+    overflow: hidden;
+    left: calc(-50vw + 50%);
   }
 }
 
@@ -76,7 +81,7 @@
     background-color: transparent;
     align-self: center;
     display: flex;
-    margin-top: 0;
+    margin-top: 48px;
   }
 
   .map-catalog {
@@ -96,13 +101,6 @@
     padding-bottom: 58px;
     height: 201px;
     line-height: 45px;
-
-    &::before {
-      top: 340px;
-      left: 333px;
-      background-size: 113px 106px;
-      background-repeat: no-repeat;
-    }
   }
 
   .map__text {
@@ -121,15 +119,26 @@
   }
 
   .map__iframe {
-    width: 768px;
+    top: 201px;
+    width: 100vw;
     height: 400px;
     overflow: hidden;
-    background-image: url("../img/bg-map-tablet@1x.png");
-    background-size: 768px 400px;
+    left: calc(-50vw + 50%);
+  }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/bg-map-tablet@2x.png");
-      background-size: 768px auto;
+  .map__pic {
+    width: 768px;
+    height: 400px;
+  }
+
+  .map__photo {
+    width: 768px;
+    height: 400px;
+  }
+
+  .map__address:not(.map__index) {
+    &::before {
+      height: 201px;
     }
   }
 }
@@ -156,10 +165,7 @@
     z-index: 3;
 
     &::before {
-      top: 0;
-      left: 780px;
-      background-size: 113px 106px;
-      background-repeat: no-repeat;
+      display: none;
     }
   }
 
@@ -175,12 +181,17 @@
     width: 100vw;
     height: 400px;
     overflow: hidden;
-    background-image: url("../img/bg-map-desktop@1x.png");
-    background-size: 1440px 400px;
+    top: 0;
+    left: calc(-50vw + 50%);
+  }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/bg-map-desktop@2x.png");
-      background-size: 1440px auto;
-    }
+  .map__pic {
+    width: 1440px;
+    height: 400px;
+  }
+
+  .map__photo {
+    width: 1440px;
+    height: 400px;
   }
 }

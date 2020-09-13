@@ -4,8 +4,9 @@
   color: @basic-text;
   border: none;
   padding: 0;
-  margin-top: 23px;
-  padding-left: 20px;
+  margin: 0;
+  margin-top: 22.5px;
+  padding-left: 19.5px;
   box-sizing: border-box;
 }
 
@@ -13,6 +14,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: 2px;
 }
 
 .fs-additional__head {
@@ -28,10 +30,11 @@
     content: "";
     position: absolute;
     background-color: @basic-theme;
-    width: 136px;
+    width: calc(100vw - 131%);
     height: 2px;
     top: 15px;
-    left: 162px;
+    left: 164px;
+    overflow: hidden;
   }
 }
 
@@ -116,10 +119,10 @@
     line-height: 36px;
 
     &::after {
-      width: 100vw;
+      width: calc(100vw + 99%);
       height: 2px;
       top: 22px;
-      left: -69px;
+      left: calc(-50vw + 50%);
       overflow: hidden;
       z-index: -2;
     }
@@ -213,7 +216,7 @@
 
   .fs-additional__head {
     &::after {
-      width: calc(120vw + 50%);
+      width: calc(100vw + 239%);
       height: 2px;
       top: 22px;
       left: calc(-50vw + 50%);
@@ -227,6 +230,6 @@
   }
 
   .fs-additional__title {
-    margin-left: 56px;
+    margin-left: 58px;
   }
 }

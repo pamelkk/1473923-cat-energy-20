@@ -12,6 +12,7 @@
   column-gap: 20px;
   grid-column-start: 1;
   grid-column-end: -1;
+  align-self: center;
 
   &::before {
     content: "";
@@ -28,6 +29,18 @@
       background-image: url("../img/index-background-mobile@2x.jpg");
       background-size: 320px auto;
     }
+  }
+
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 305px;
+    position: absolute;
+    background-color: #63a848;
+    top: 0;
+    left: calc(-50vw + 50%);
+    overflow: hidden;
+    z-index: -2;
   }
 }
 
@@ -133,6 +146,10 @@
     margin-bottom: 75px;
 
     &::before {
+      display: none;
+    }
+
+    &::after {
       display: none;
     }
   }

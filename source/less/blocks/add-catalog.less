@@ -4,6 +4,7 @@
   font-family: @font-header;
   width: 320px;
   box-sizing: border-box;
+  align-self: center;
 }
 
 .add-catalog__title {
@@ -21,10 +22,11 @@
     content: "";
     position: absolute;
     background-color: @basic-theme;
-    width: 53px;
+    width: calc(100vw - 89%);
     height: 2px;
     top: 42px;
-    right: 0;
+    left: 247px;
+    overflow: hidden;
   }
 }
 
@@ -83,10 +85,10 @@
 
 
     &::after {
-      width: 100vw;
+      width: calc(100vw + 29.2%);
       height: 2px;
       top: 50px;
-      left: -67px;
+      left: calc(-50vw + 50%);
       z-index: -2;
     }
 

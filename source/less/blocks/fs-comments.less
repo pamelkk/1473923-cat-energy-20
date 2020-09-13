@@ -4,7 +4,7 @@
   border: none;
   padding: 0;
   margin: 0;
-  margin-top: 27px;
+  margin-top: 28px;
   margin-bottom: 0;
   padding-left: 20px;
   box-sizing: border-box;
@@ -23,10 +23,11 @@
     content: "";
     position: absolute;
     background-color: @basic-theme;
-    width: 158px;
+    width: calc(100vw - 135%);
     height: 2px;
     top: 15px;
     left: 142px;
+    overflow: hidden;
   }
 }
 
@@ -40,7 +41,7 @@
   color: @basic-dark-text;
   width: 280px;
   box-sizing: border-box;
-  padding-top: 13px;
+  padding-top: 12px;
   padding-bottom: 13px;
   padding-left: 15px;
   padding-right: 12px;
@@ -73,10 +74,10 @@
     line-height: 36px;
 
     &::after {
-      width: 100vw;
+      width: calc(100vw + 125%);
       height: 2px;
-      top: 22px;
-      left: -69px;
+      top: 21px;
+      left: calc(-50vw + 50%);
       overflow: hidden;
       z-index: -2;
     }
@@ -124,10 +125,10 @@
 
   .fs-comments__head {
     &::after {
-      width: calc(100vw + 100%);
+      width: calc(100vw + 288%);
       height: 2px;
       top: 22px;
-      left: calc(-50vw + 100%);
+      left: calc(-50vw + 50%);
       right: 0;
     }
 

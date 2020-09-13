@@ -150,7 +150,6 @@
   justify-content: space-between;
 }
 
-
 @media (min-width: @tablet-width) {
   .item__photo {
     align-self: center;
@@ -180,7 +179,7 @@
     padding: 0;
 
     &:nth-of-type(2n) .item__photo {
-      width: 330px;
+      width: 323px;
       height: 210px;
       margin-top: -5px;
     }
@@ -271,7 +270,11 @@
   .item__wrapper {
     flex-direction: column;
     height: auto;
-    width: auto;
+    width: 323px;
+  }
+
+  .item__pic {
+    width: 323px;
   }
 
   .item__options {
@@ -399,5 +402,9 @@
 
   .item__all-text {
     margin-top: 159px;
+  }
+
+  .item__wrapper {
+    width: auto;
   }
 }
