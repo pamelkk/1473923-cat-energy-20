@@ -8,17 +8,21 @@
   flex-direction: column;
   background-color: @features-footer;
   position: relative;
+  align-self: center;
 }
 
 .map__iframe {
-  width: 320px;
-  background-image: url("../img/bg-map-mobile@1x.png");
-  background-size: 320px 362px;
+  height: 362px;
+  position: absolute;
+  top: 113px;
+  width: 100vw;
+  overflow: hidden;
+  left: calc(-50vw + 50%);
+}
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/bg-map-mobile@2x.png");
-    background-size: 320px 362px;
-  }
+.map__pic {
+  width: 320px;
+  height: 362px;
 }
 
 .map__text {
@@ -29,11 +33,12 @@
   width: 140px;
   font-style: normal;
   font-family: @font-text;
+  padding-top: 3px;
 }
 
 .map__invite {
   font-size: 16px;
-  line-height: 18px;
+  line-height: 21px;
   text-transform: uppercase;
   color: @form-etc;
   width: 140px;
@@ -42,23 +47,27 @@
 
 .map__address {
   padding: 20px;
+  padding-top: 26px;
+  padding-bottom: 24px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: @features-footer;
   position: relative;
   box-sizing: border-box;
+}
 
+.map__address:not(.map__index) {
   &::before {
     content: "";
     position: absolute;
-    top: 240px;
-    left: 134px;
-    width: 124px;
-    height: 106px;
-    background-image: url("../img/map-pin.png");
-    background-size: 57px 53px;
-    background-repeat: no-repeat;
+    background-color: @features-footer;
+    z-index: -1;
+    width: 100vw;
+    height: 113px;
+    top: 0;
+    overflow: hidden;
+    left: calc(-50vw + 50%);
   }
 }
 
@@ -72,6 +81,11 @@
     background-color: transparent;
     align-self: center;
     display: flex;
+    margin-top: 48px;
+  }
+
+  .map-catalog {
+    margin-top: 0;
   }
 
   .map__picture {
@@ -85,13 +99,8 @@
     padding-left: 71px;
     padding-right: 72px;
     padding-bottom: 58px;
-
-    &::before {
-      top: 340px;
-      left: 333px;
-      background-size: 113px 106px;
-      background-repeat: no-repeat;
-    }
+    height: 201px;
+    line-height: 45px;
   }
 
   .map__text {
@@ -99,50 +108,70 @@
     text-align: right;
     font-size: 16px;
     line-height: 20px;
+    padding-top: 0;
   }
 
   .map__invite {
     font-size: 20px;
     line-height: 21px;
+    width: 171px;
+    height: 83px;
   }
 
   .map__iframe {
-    width: 768px;
+    top: 201px;
+    width: 100vw;
     height: 400px;
     overflow: hidden;
-    background-image: url("../img/bg-map-tablet@1x.png");
-    background-size: 768px 400px;
+    left: calc(-50vw + 50%);
+  }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/bg-map-tablet@2x.png");
-      background-size: 768px auto;
+  .map__pic {
+    width: 768px;
+    height: 400px;
+  }
+
+  .map__photo {
+    width: 768px;
+    height: 400px;
+  }
+
+  .map__address:not(.map__index) {
+    &::before {
+      height: 201px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .map {
-    width: 1440px;
+    width: 1425px;
     position: relative;
     grid-column-start: 1;
     grid-column-end: -1;
+    margin-top: 0;
+    display: flex;
   }
 
   .map__address {
     position: absolute;
     top: 95px;
     left: 110px;
-    padding: 60px;
+    padding: 68px;
+    padding-left: 75px;
+    padding-right: 85px;
+    padding-bottom: 60px;
     width: 570px;
     background-color: @basic-bck;
     z-index: 3;
 
     &::before {
-      top: 0;
-      left: 780px;
-      background-size: 113px 106px;
-      background-repeat: no-repeat;
+      display: none;
     }
+  }
+
+  .map__invite {
+    width: 163px;
   }
 
   .map__text {
@@ -150,15 +179,21 @@
   }
 
   .map__iframe {
-    width: 100vw;
+    width: calc(100vw - 0.5%);
     height: 400px;
     overflow: hidden;
-    background-image: url("../img/bg-map-desktop@1x.png");
-    background-size: 1440px 400px;
+    top: 0;
+    left: calc(-50vw + 50%);
+  }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/bg-map-desktop@2x.png");
-      background-size: 1440px auto;
-    }
+  .map__pic {
+    width: 1425px;
+    height: 400px;
+  }
+
+  .map__photo {
+    width: 1425px;
+    height: 400px;
+    overflow: hidden;
   }
 }

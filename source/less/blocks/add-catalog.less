@@ -4,6 +4,7 @@
   font-family: @font-header;
   width: 320px;
   box-sizing: border-box;
+  align-self: center;
 }
 
 .add-catalog__title {
@@ -12,8 +13,8 @@
   text-align: left;
   margin: 0;
   margin-left: 20px;
-  padding-top: 28px;
-  padding-bottom: 35px;
+  padding-top: 27px;
+  padding-bottom: 34px;
   font-weight: 400;
   position: relative;
 
@@ -21,10 +22,11 @@
     content: "";
     position: absolute;
     background-color: @basic-theme;
-    width: 53px;
+    width: calc(100vw - 89%);
     height: 2px;
     top: 42px;
-    right: 0;
+    left: 247px;
+    overflow: hidden;
   }
 }
 
@@ -69,10 +71,11 @@
     width: 708px;
     grid-column-start: 1;
     grid-column-end: -1;
+    margin-top: 40px;
   }
 
   .add-catalog__title {
-    padding-bottom: 80px;
+    padding-bottom: 81px;
     text-align: left;
     flex-grow: 3;
     width: 400px;
@@ -82,10 +85,10 @@
 
 
     &::after {
-      width: 100vw;
+      width: calc(100vw + 29.2%);
       height: 2px;
       top: 50px;
-      left: -67px;
+      left: calc(-50vw + 50%);
       z-index: -2;
     }
 
@@ -115,6 +118,7 @@
     flex-wrap: wrap;
     box-sizing: content-box;
     align-self: center;
+    margin-top: 48px;
   }
 
   .add-catalog__title {
@@ -124,10 +128,10 @@
     margin-left: 0;
 
     &::after {
-      width: 100vw;
+      width: calc(100vw - 0.5%);
       height: 2px;
       top: 50px;
-      left: -110px;
+      left: calc(-50vw + 50%);
       overflow: hidden;
     }
 

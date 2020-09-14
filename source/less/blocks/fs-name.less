@@ -4,12 +4,14 @@
   flex-wrap: wrap;
   margin: 0;
   flex-direction: column;
-  width: 280px;
+  width: 320px;
   border: none;
   padding: 0;
-  padding-bottom: 27px;
+  padding-bottom: 24px;
   border-bottom: 1px solid @social-lines;
   color: @basic-dark-text;
+  padding-left: 20px;
+  box-sizing: border-box;
 }
 
 .fs-name__field {
@@ -28,6 +30,7 @@
   color: @basic-dark-text;
   font-family: @font-header;
   box-sizing: border-box;
+  height: 45px;
 
   &:hover {
     border-color: @border-toggle;
@@ -42,6 +45,10 @@
   }
 }
 
+.fs-active {
+  outline: 1px solid @error;
+}
+
 .fs-name__title {
   font-weight: 400;
   font-size: 16px;
@@ -52,9 +59,13 @@
   min-width: 39px;
 }
 
+.fs-name__title-age {
+  min-width: 94px;
+}
+
 .fs-name__row {
   height: 45px;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   display: flex;
   width: 281px;
   box-sizing: border-box;
@@ -64,11 +75,20 @@
   margin-bottom: 0;
 }
 
+.fs-name__field-age {
+  margin-left: 14px;
+}
+
+.fs-name__field-weight {
+  margin-left: 12px;
+}
+
 @media (min-width: @tablet-width) {
   .fs-name {
     border: none;
     width: 630px;
     padding-bottom: 0;
+    padding-left: 2px;
   }
 
   .fs-name__row {
@@ -85,6 +105,7 @@
     padding-bottom: 11px;
     padding-left: 18px;
     padding-right: 18px;
+    height: 52px;
 
     &:active {
       padding-top: 10px;
@@ -92,6 +113,19 @@
       padding-left: 17px;
       padding-right: 17px;
     }
+  }
+
+  .fs-name__field-age {
+    margin-left: 16px;
+  }
+
+  .fs-name__field-weight {
+    margin-left: 8px;
+  }
+
+  .fs-name__field-name {
+    width: 567px;
+    margin-left: 16px;
   }
 
   .fs-name__title {
@@ -113,14 +147,26 @@
     min-width: 436px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 18px;
     padding-right: 20px;
 
     &:active {
       padding-top: 9px;
       padding-bottom: 9px;
-      padding-left: 19px;
+      padding-left: 17px;
       padding-right: 19px;
     }
+  }
+
+  .fs-name__field-age {
+    margin-left: 16px;
+  }
+
+  .fs-name__field-weight {
+    margin-left: 5px;
+  }
+
+  .fs-name__field-name {
+    margin-left: 20px;
   }
 }

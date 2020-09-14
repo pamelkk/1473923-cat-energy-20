@@ -1,17 +1,34 @@
 .footer {
-  width: 320px;
+  width: auto;
   background-color: @features-footer;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  align-self: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: @features-footer;
+    z-index: -1;
+    width: 100vw;
+    height: 175px;
+    top: 0;
+    overflow: hidden;
+    left: calc(-50vw + 50%);
+  }
 }
 
 .footer__logo {
   font-family: @font-header;
-  padding-top: 39px;
-  padding-bottom: 32px;
-  padding-left: 96px;
+  padding-top: 41px;
+  padding-bottom: 27px;
+  padding-left: 94px;
   padding-right: 96px;
+  align-self: center;
 
   &:hover {
     opacity: 0.8;
@@ -22,10 +39,14 @@
   }
 }
 
+.footer-form .footer__logo {
+  padding-top: 38px;
+}
+
 @media (min-width: @tablet-width) {
   .footer {
     width: 708px;
-    padding-top: 55px;
+    padding-top: 36px;
     padding-bottom: 51px;
     flex-direction: row;
     justify-content: space-between;
@@ -34,38 +55,53 @@
     position: relative;
 
     &::before {
-      content: "";
-      position: absolute;
-      width: 768px;
-      height: 175px;
-      background-color: @features-footer;
-      z-index: -1;
+      height: 150px;
       top: 0;
-      left: -30px;
+      left: calc(-50vw + 50%);
     }
   }
 
   .footer__logo {
     padding: 0;
+    padding-top: 8px;
     align-self: center;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer {
-    width: 1440px;
+    width: 1426px;
     box-sizing: border-box;
-    padding: 110px;
-    padding-top: 56px;
+    padding-left: 93px;
+    padding-right: 127px;
+    padding-top: 40px;
     padding-bottom: 48px;
     grid-column-start: 1;
     grid-column-end: -1;
 
     &::before {
-      width: 100%;
-      height: 175px;
+      width: calc(100vw - 1%);
+      height: 149px;
       top: 0;
-      left: 0;
+      left: calc(-50vw + 50%);
     }
+  }
+
+  .footer__logo {
+    padding-top: 7px;
+  }
+
+  .footer-catalog {
+    padding-left: 94px;
+    padding-right: 127px;
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .footer-form {
+    padding-left: 90px;
+    padding-right: 128px;
+    padding-top: 40px;
+    padding-bottom: 48px;
   }
 }
