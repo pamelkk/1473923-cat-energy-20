@@ -76,6 +76,10 @@
   }
 }
 
+.fs-active:invalid {
+  outline: 1px solid @error;
+}
+
 .fs-contacts__field {
   padding-top: 13px;
   padding-bottom: 15px;
@@ -131,11 +135,6 @@
 .fs-contacts__field:active + .fs-contacts__title::before {
   fill: @basic-theme;
 }
-
-.fs-active:invalid {
-  outline: 1px solid @error;
-}
-
 
 @media (min-width: @tablet-width) {
   .fs-contacts {
