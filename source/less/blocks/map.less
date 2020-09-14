@@ -145,11 +145,12 @@
 
 @media (min-width: @desktop-width) {
   .map {
-    width: 1440px;
+    width: 1425px;
     position: relative;
     grid-column-start: 1;
     grid-column-end: -1;
     margin-top: 0;
+    display: flex;
   }
 
   .map__address {
@@ -178,7 +179,7 @@
   }
 
   .map__iframe {
-    width: 100vw;
+    width: calc(100vw - 0.5%);
     height: 400px;
     overflow: hidden;
     top: 0;
@@ -186,12 +187,13 @@
   }
 
   .map__pic {
-    width: 1440px;
+    width: 1425px;
     height: 400px;
   }
 
   .map__photo {
-    width: 1440px;
+    width: 1425px;
     height: 400px;
+    overflow: hidden;
   }
 }
