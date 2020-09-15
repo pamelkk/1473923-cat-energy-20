@@ -92,7 +92,6 @@ const sprite = () => {
 exports.sprite = sprite;
 
 // Server
-
 const server = (done) => {
   sync.init({
     server: {
@@ -139,12 +138,12 @@ const build = () => gulp.series(
   styles,
   html,
   js,
+  sprite,
   images,
-  makewebp,
-  sprite
+  makewebp
 );
 
-exports.build = gulp.series(clean, copy, styles, html, js, images, makewebp, sprite);
+exports.build = gulp.series(clean, copy, styles, html, js, sprite, images, makewebp);
 
 const start = () => gulp.series(
   clean,
@@ -152,8 +151,11 @@ const start = () => gulp.series(
   styles,
   html,
   js,
+  sprite,
+  images,
+  makewebp,
   server,
   watcher
 );
 
-exports.start = gulp.series(clean, copy, styles, html, js, server, watcher);
+exports.start = gulp.series(clean, copy, styles, html, js, sprite, images, makewebp, server, watcher);

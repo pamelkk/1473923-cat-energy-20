@@ -107,8 +107,20 @@
     background-repeat: no-repeat;
   }
 
+  &:hover {
+    &::before {
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
   &:active {
     opacity: 0.3;
+
+    &::before {
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
 

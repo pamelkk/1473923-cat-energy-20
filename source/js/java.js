@@ -11,6 +11,9 @@ var inputElements = document.querySelectorAll("input");
 var isStorageSupport = true;
 var storage = "";
 
+menu.classList.add("main-nav-inactive");
+buttonOpen.classList.add("closed-menu");
+
 buttonOpen.addEventListener("click", function (evt) {
   console.log("Открыть меню!");
   if (!menu.classList.contains("main-nav-inactive")) {
